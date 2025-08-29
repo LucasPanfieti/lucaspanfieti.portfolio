@@ -97,23 +97,25 @@ export default function Home() {
 
       {/* Header */}
       <header className="p-6 bg-gray-800 shadow-md flex justify-between items-center flex-col-425">
-        <h1 className="text-2xl font-bold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full">
+        <h1 className="text-3xl font-bold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full">
           Lucas <span className="text-green-400">Panfieti</span>
         </h1>
 
-        <nav className="flex gap-3 md:gap-10 items-center">
+        <nav className="flex gap-4 items-center">
           <a
             href="#sobre"
             className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
           >
             Sobre
           </a>
+          |
           <a
             href="#projetos"
             className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
           >
             Projetos
           </a>
+          |
           <a
             href="#habilidades"
             className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
