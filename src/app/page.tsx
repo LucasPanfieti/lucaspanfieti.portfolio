@@ -26,11 +26,11 @@ import Head from "next/head";
 // constante com projetos
 const projects = [
   {
-    name: "Meu Portifólio",
+    name: "Meu Portfólio",
     description:
-      "Portifólio de Lucas Panfieti, feito com Next.js e com deploy na Vercel",
-    link: "https://portfolio-beta-sable-98.vercel.app/",
-    github: "https://github.com/LucasPanfieti/portfolio",
+      "Portfólio de Lucas Panfieti, feito com Next.js e com deploy na Vercel",
+    link: "https://lucaspanfieti-portfolio.vercel.app/",
+    github: "https://github.com/LucasPanfieti/lucaspanfieti.portfolio",
     image: "/images/portifolio.png",
     techs: ["next", "react", "vercel", "tailwind", "ts"],
     date: "Agosto 2025",
