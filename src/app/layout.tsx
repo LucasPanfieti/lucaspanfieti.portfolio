@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Portfólio | Lucas - Desenvolvedor Front-end",
     description:
       "Confira meus projetos e habilidades em desenvolvimento front-end.",
-    url: "https://lucaspanfieti-portifolio.vercel.app/",
+    url: "https://lucaspanfieti-portfolio.vercel.app/",
     siteName: "Portfólio Lucas",
     images: [
       {
