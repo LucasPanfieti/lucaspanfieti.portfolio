@@ -1,0 +1,353 @@
+import Image from "next/image";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaDownload,
+  FaEnvelope,
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaRegCalendarAlt,
+} from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiJavascript,
+  SiVercel,
+} from "react-icons/si";
+import { RiShareBoxFill } from "react-icons/ri";
+
+import { SiHtml5, SiCss3, SiReact } from "react-icons/si";
+import { SiGit, SiFigma } from "react-icons/si";
+import { VscVscodeInsiders } from "react-icons/vsc";
+import Head from "next/head";
+
+// constante com projetos
+const projects = [
+  {
+    name: "Meu Portifólio",
+    description:
+      "Portifólio de Lucas Panfieti, feito com Next.js e com deploy na Vercel",
+    link: "https://portfolio-beta-sable-98.vercel.app/",
+    github: "https://github.com/LucasPanfieti/portfolio",
+    image: "/images/portifolio.png",
+    techs: ["next", "react", "vercel", "tailwind", "ts"],
+    date: "Agosto 2025",
+  },
+  {
+    name: "To Do List",
+    description:
+      "Aplicação de lista de tarefas feita com React/Next + Tailwind.",
+    link: "https://to-do-list-next-three.vercel.app/",
+    github: "https://github.com/LucasPanfieti/ToDoList_Next",
+    image: "/images/todo-list.png",
+    techs: ["next", "react", "js", "css", "html", "vercel"],
+    date: "Agosto 2025",
+  },
+  {
+    name: "Color Name",
+    description:
+      "Neste app, o usuário digita o nome e escolhe uma cor. O nome é renderizado dinamicamente com o estilo personalizado!",
+    github: "https://github.com/LucasPanfieti/color-name_Next",
+    link: "https://color-name-next.vercel.app/",
+    image: "/images/color-name.png",
+    techs: ["html", "css", "js", "react", "next", "vercel"],
+    date: "Julho 2025",
+  },
+  {
+    name: "Calculadora de IMC interativa",
+    description: "Projeto simples em HTML, CSS e JS para calcular IMC.",
+    link: "https://lucaspanfieti.github.io/calculo_imc/",
+    image: "/images/imc.png",
+    techs: ["html", "css", "js"],
+    github: "https://github.com/LucasPanfieti/calculo_imc",
+    date: "Junho 2025",
+  },
+  {
+    name: "Projeto Annabella",
+    description:
+      "Trata-se de um site institucional simples e estático (HTML+CSS) de uma modelo fictícia chamada Anna Bella, com foco na apresentação de biografia, campanhas publicitárias e informações de contato.",
+    link: "https://lucaspanfieti.github.io/projeto-annabella/",
+    image: "/images/annabella.png",
+    techs: ["html", "css"],
+    github: "https://github.com/LucasPanfieti/projeto-annabella",
+    date: "Junho 2025",
+  },
+  {
+    name: "Projeto UNES",
+    description:
+      "Trata-se de uma página HTML simples e responsiva para uma universidade fictícia chamada UNES (Universidade Nacional de Ensino Superior).",
+    link: "https://lucaspanfieti.github.io/projeto-final-html/",
+    image: "/images/final-html.png",
+    techs: ["html"],
+    github: "https://github.com/LucasPanfieti/projeto-final-html",
+    date: "Maio 2025",
+  },
+];
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-gray-900 text-gray-100">
+      {/* Linha verde no topo */}
+      <div className="w-full h-1 bg-green-400 fixed top-0 left-0 z-50"></div>
+
+      {/* Header */}
+      <header className="p-6 bg-gray-800 shadow-md flex justify-between items-center">
+        <h1 className="text-2xl font-bold">
+          Lucas <span className=" text-green-400">Panfieti</span>
+        </h1>
+        <nav className="flex gap-6">
+          <a href="#sobre" className="hover:text-green-400">
+            Sobre
+          </a>
+          <a href="#projetos" className="hover:text-green-400">
+            Projetos
+          </a>
+          <a href="#habilidades" className="hover:text-green-400">
+            Habilidades
+          </a>
+        </nav>
+      </header>
+      <div className="flex flex-wrap justify-center items-center mt-14 mb-4 gap-2 lg:mt-12 lg:mb-12 xl:gap-20">
+        {/* Foto de perfil */}
+        <section className="flex flex-col items-center justify-center">
+          <Image
+            src="/images/perfil.png" // coloque sua foto na pasta public/images
+            alt="Foto de perfil"
+            width={300}
+            height={300}
+            className="rounded-full border-4 border-green-400 shadow-lg"
+          />
+        </section>
+
+        {/* Sobre */}
+        <section id="sobre" className="p-10 text-center">
+          <h2 className="text-2xl font-semibold text-green-400">Sobre mim</h2>
+          <p className="mt-6 max-w-2xl mx-auto text-gray-300 text-justify">
+            Olá! 👋 Meu nome é{" "}
+            <span className="text-green-400">Lucas Panfieti</span>, sou{" "}
+            <span className="text-green-400">
+              estagiário em desenvolvimento de software
+            </span>{" "}
+            e estudante de{" "}
+            <span className="text-green-400">
+              Análise e Desenvolvimento de Sistemas
+            </span>{" "}
+            no último semestre. Tenho foco em{" "}
+            <span className="text-green-400">desenvolvimento front-end</span>,
+            com tecnologias como{" "}
+            <span className="text-green-400">
+              HTML, CSS, JavaScript, TypeScript, React, Next.js e Tailwind CSS
+            </span>
+            . Estou sempre buscando desafios práticos e formas de aprimorar
+            minhas habilidades.
+          </p>
+
+          <a
+            href="/Lucas_Panfieti_CV.pdf"
+            download
+            className="mt-10 mb-4 inline-flex items-center gap-2 bg-green-400 text-gray-900 font-semibold px-6 py-2 rounded-lg hover:bg-green-500 transition"
+          >
+            <FaDownload /> Baixar Currículo
+          </a>
+
+          <div className="pt-6 flex gap-6 justify-center text-2xl">
+            {/* <h2 className="text-xl font-semibold text-green-400">Contatos</h2> */}
+            {/* E-mail */}
+
+            <a
+              href="mailto:lucaspanfieti@gmail.com"
+              className="hover:text-green-400"
+            >
+              <FaEnvelope />
+            </a>
+
+            {/* GitHub */}
+            <a
+              href="https://github.com/LucasPanfieti"
+              target="_blank"
+              className="hover:text-green-400"
+            >
+              <FaGithub />
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/lucas-panfieti/"
+              target="_blank"
+              className="hover:text-green-400"
+            >
+              <FaLinkedin />
+            </a>
+          </div>
+        </section>
+      </div>
+
+      {/* Projetos */}
+      <section id="projetos" className="p-10 bg-gray-800">
+        <h2 className="text-2xl font-semibold text-center text-green-400">
+          Projetos
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+          {projects.map((project) => (
+            <div
+              key={project.name}
+              className="p-4 border border-gray-700 rounded-xl bg-gray-900 shadow hover:shadow-lg transition"
+            >
+              {/* Data do projeto */}
+              <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
+                <FaRegCalendarAlt />
+                <span>{project.date}</span>
+              </div>
+              {/* Imagem do projeto */}
+              <Image
+                src={project.image}
+                alt={project.name}
+                width={400} // largura original da imagem
+                height={200} // altura original da imagem
+                className="w-full h-40 object-cover rounded-md mb-3"
+              />
+              <h3 className="font-bold text-lg">{project.name}</h3>
+              <p className="text-gray-400 mt-2">{project.description}</p>
+              <div className="flex items-center gap-3 mt-3 text-xl">
+                {project.techs?.includes("html") && (
+                  <FaHtml5 className="text-orange-500" />
+                )}
+                {project.techs?.includes("css") && (
+                  <FaCss3Alt className="text-blue-500" />
+                )}
+                {project.techs?.includes("js") && (
+                  <SiJavascript className="text-yellow-400" />
+                )}
+                {project.techs?.includes("react") && (
+                  <FaReact className="text-cyan-400" />
+                )}
+                {project.techs?.includes("next") && (
+                  <SiNextdotjs className="text-white" />
+                )}
+                {project.techs?.includes("ts") && (
+                  <SiTypescript className="text-blue-400" />
+                )}
+                {project.techs?.includes("tailwind") && (
+                  <SiTailwindcss className="text-sky-400" />
+                )}
+                {project.techs?.includes("vercel") && (
+                  <SiVercel className="text-white p-0.5" />
+                )}
+              </div>
+              <div className="flex flex-wrap justify-center mt-3">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  className="mt-3 inline-flex items-center justify-center gap-2 bg-green-400 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:bg-green-500 transition mx-auto"
+                >
+                  <RiShareBoxFill />
+                  Ver Projeto
+                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className="mt-3 inline-flex items-center justify-center gap-2 bg-gray-950 text-gray-200 font-semibold px-4 py-2 rounded-lg hover:bg-gray-800 transition mx-auto"
+                  >
+                    <FaGithub className="text-gray-200" /> Código
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Habilidades */}
+      <section id="habilidades" className="p-10 bg-gray-900">
+        <h2 className="text-2xl font-bold text-center text-green-400 mb-8">
+          Habilidades
+        </h2>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+          {/* HTML */}
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+            <SiHtml5 className="text-orange-500 text-5xl" />
+            <span className="mt-3 text-gray-200 font-medium">HTML</span>
+          </div>
+
+          {/* CSS */}
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+            <SiCss3 className="text-blue-500 text-5xl" />
+            <span className="mt-3 text-gray-200 font-medium">CSS</span>
+          </div>
+
+          {/* JavaScript */}
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+            <SiJavascript className="text-yellow-400 text-5xl" />
+            <span className="mt-3 text-gray-200 font-medium">JavaScript</span>
+          </div>
+
+          {/* TypeScript */}
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+            <SiTypescript className="text-blue-400 text-5xl" />
+            <span className="mt-3 text-gray-200 font-medium">TypeScript</span>
+          </div>
+
+          {/* React */}
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+            <SiReact className="text-cyan-400 text-5xl" />
+            <span className="mt-3 text-gray-200 font-medium">React</span>
+          </div>
+
+          {/* Next.js */}
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+            <SiNextdotjs className="text-white text-5xl" />
+            <span className="mt-3 text-gray-200 font-medium">Next.js</span>
+          </div>
+
+          {/* Tailwind */}
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+            <SiTailwindcss className="text-sky-400 text-5xl" />
+            <span className="mt-3 text-gray-200 font-medium">Tailwind</span>
+          </div>
+
+          {/* Vercel */}
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+            <SiVercel className="text-white text-5xl" />
+            <span className="mt-3 text-gray-200 font-medium">Vercel</span>
+          </div>
+
+          {/* GitHub */}
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+            <FaGithub className="text-gray-300 text-5xl" />
+            <span className="mt-3 text-gray-200 font-medium">GitHub</span>
+          </div>
+
+          {/* Git */}
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+            <SiGit className="text-red-500 text-5xl" />
+            <span className="mt-3 text-gray-200 font-medium">Git</span>
+          </div>
+
+          {/* Figma */}
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+            <SiFigma className="text-pink-500 text-5xl" />
+            <span className="mt-3 text-gray-200 font-medium">Figma</span>
+          </div>
+
+          {/* VS Code */}
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+            <VscVscodeInsiders className="text-blue-500 text-5xl" />
+            <span className="mt-3 text-gray-200 font-medium">VS Code</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer id="direitos" className="p-6 bg-gray-950 text-center">
+        {/* Direitos reservados */}
+        <p className="text-gray-500 ">
+          © 2025 Lucas Panfieti. Todos os direitos reservados.
+        </p>
+      </footer>
+    </main>
+  );
+}
