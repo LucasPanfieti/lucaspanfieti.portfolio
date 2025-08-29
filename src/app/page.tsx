@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaUser, FaProjectDiagram, FaTools } from "react-icons/fa";
 import {
   FaGithub,
   FaLinkedin,
@@ -21,7 +22,9 @@ import { RiShareBoxFill } from "react-icons/ri";
 import { SiHtml5, SiCss3, SiReact } from "react-icons/si";
 import { SiGit, SiFigma } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
-import Head from "next/head";
+import { FaRegUser } from "react-icons/fa";
+import { CgCode } from "react-icons/cg";
+import { TbTools } from "react-icons/tb";
 
 // constante com projetos
 const projects = [
@@ -31,7 +34,7 @@ const projects = [
       "Portfólio de Lucas Panfieti, feito com Next.js e com deploy na Vercel",
     link: "https://lucaspanfieti-portfolio.vercel.app/",
     github: "https://github.com/LucasPanfieti/lucaspanfieti.portfolio",
-    image: "/images/portifolio.png",
+    image: "/preview.png",
     techs: ["next", "react", "vercel", "tailwind", "ts"],
     date: "Agosto 2025",
   },
@@ -93,22 +96,33 @@ export default function Home() {
       <div className="w-full h-1 bg-green-400 fixed top-0 left-0 z-50"></div>
 
       {/* Header */}
-      <header className="p-6 bg-gray-800 shadow-md flex justify-between items-center">
-        <h1 className="text-2xl font-bold">
-          Lucas <span className=" text-green-400">Panfieti</span>
+      <header className="p-6 bg-gray-800 shadow-md flex justify-between items-center flex-col-425">
+        <h1 className="text-2xl font-bold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full">
+          Lucas <span className="text-green-400">Panfieti</span>
         </h1>
-        <nav className="flex gap-6">
-          <a href="#sobre" className="hover:text-green-400">
+
+        <nav className="flex gap-3 md:gap-10 items-center">
+          <a
+            href="#sobre"
+            className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
+          >
             Sobre
           </a>
-          <a href="#projetos" className="hover:text-green-400">
+          <a
+            href="#projetos"
+            className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
+          >
             Projetos
           </a>
-          <a href="#habilidades" className="hover:text-green-400">
+          <a
+            href="#habilidades"
+            className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
+          >
             Habilidades
           </a>
         </nav>
       </header>
+
       <div className="flex flex-wrap justify-center items-center mt-14 mb-4 gap-2 lg:mt-12 lg:mb-12 xl:gap-20">
         {/* Foto de perfil */}
         <section className="flex flex-col items-center justify-center">
@@ -117,12 +131,12 @@ export default function Home() {
             alt="Foto de perfil"
             width={300}
             height={300}
-            className="rounded-full border-4 border-green-400 shadow-lg"
+            className="rounded-full border-4 border-green-400 shadow-lg hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300"
           />
         </section>
 
         {/* Sobre */}
-        <section id="sobre" className="p-10 text-center">
+        <section id="sobre" className="p-10 text-center ">
           <h2 className="text-2xl font-semibold text-green-400">Sobre mim</h2>
           <p className="mt-6 max-w-2xl mx-auto text-gray-300 text-justify">
             Olá! 👋 Meu nome é{" "}
@@ -147,18 +161,19 @@ export default function Home() {
           <a
             href="/Lucas_Panfieti_CV.pdf"
             download
-            className="mt-10 mb-4 inline-flex items-center gap-2 bg-green-400 text-gray-900 font-semibold px-6 py-2 rounded-lg hover:bg-green-500 transition"
+            className="mt-10 mb-4 inline-flex items-center gap-2 bg-green-400 text-gray-900 font-semibold px-6 py-2 rounded-lg hover:bg-green-600  hover:shadow-green-400 hover:scale-105 transition-transform duration-300
+"
           >
             <FaDownload /> Baixar Currículo
           </a>
 
-          <div className="pt-6 flex gap-6 justify-center text-2xl">
+          <div className="pt-6 flex gap-6 justify-center text-2xl ">
             {/* <h2 className="text-xl font-semibold text-green-400">Contatos</h2> */}
             {/* E-mail */}
 
             <a
               href="mailto:lucaspanfieti@gmail.com"
-              className="hover:text-green-400"
+              className="hover:text-green-400 hover:shadow-green-400/30 hover:scale-110 transition-transform duration-200"
             >
               <FaEnvelope />
             </a>
@@ -167,7 +182,7 @@ export default function Home() {
             <a
               href="https://github.com/LucasPanfieti"
               target="_blank"
-              className="hover:text-green-400"
+              className="hover:text-green-400 hover:shadow-green-400/30 hover:scale-110 transition-transform duration-200"
             >
               <FaGithub />
             </a>
@@ -176,7 +191,7 @@ export default function Home() {
             <a
               href="https://www.linkedin.com/in/lucas-panfieti/"
               target="_blank"
-              className="hover:text-green-400"
+              className="hover:text-green-400 hover:shadow-green-400/30 hover:scale-110 transition-transform duration-200"
             >
               <FaLinkedin />
             </a>
@@ -189,11 +204,12 @@ export default function Home() {
         <h2 className="text-2xl font-semibold text-center text-green-400">
           Projetos
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ">
           {projects.map((project) => (
             <div
               key={project.name}
-              className="p-4 border border-gray-700 rounded-xl bg-gray-900 shadow hover:shadow-lg transition"
+              className="p-4 border border-gray-700 rounded-xl bg-gray-900 shadow hover:shadow-lg  hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300
+"
             >
               {/* Data do projeto */}
               <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
@@ -240,7 +256,7 @@ export default function Home() {
                 <a
                   href={project.link}
                   target="_blank"
-                  className="mt-3 inline-flex items-center justify-center gap-2 bg-green-400 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:bg-green-500 transition mx-auto"
+                  className="mt-3 inline-flex items-center justify-center gap-2 bg-green-400 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition mx-auto"
                 >
                   <RiShareBoxFill />
                   Ver Projeto
@@ -268,73 +284,73 @@ export default function Home() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
           {/* HTML */}
-          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
             <SiHtml5 className="text-orange-500 text-5xl" />
             <span className="mt-3 text-gray-200 font-medium">HTML</span>
           </div>
 
           {/* CSS */}
-          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
             <SiCss3 className="text-blue-500 text-5xl" />
             <span className="mt-3 text-gray-200 font-medium">CSS</span>
           </div>
 
           {/* JavaScript */}
-          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
             <SiJavascript className="text-yellow-400 text-5xl" />
             <span className="mt-3 text-gray-200 font-medium">JavaScript</span>
           </div>
 
           {/* TypeScript */}
-          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
             <SiTypescript className="text-blue-400 text-5xl" />
             <span className="mt-3 text-gray-200 font-medium">TypeScript</span>
           </div>
 
           {/* React */}
-          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
             <SiReact className="text-cyan-400 text-5xl" />
             <span className="mt-3 text-gray-200 font-medium">React</span>
           </div>
 
           {/* Next.js */}
-          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
             <SiNextdotjs className="text-white text-5xl" />
             <span className="mt-3 text-gray-200 font-medium">Next.js</span>
           </div>
 
           {/* Tailwind */}
-          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
             <SiTailwindcss className="text-sky-400 text-5xl" />
             <span className="mt-3 text-gray-200 font-medium">Tailwind</span>
           </div>
 
           {/* Vercel */}
-          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
             <SiVercel className="text-white text-5xl" />
             <span className="mt-3 text-gray-200 font-medium">Vercel</span>
           </div>
 
           {/* GitHub */}
-          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
             <FaGithub className="text-gray-300 text-5xl" />
             <span className="mt-3 text-gray-200 font-medium">GitHub</span>
           </div>
 
           {/* Git */}
-          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
             <SiGit className="text-red-500 text-5xl" />
             <span className="mt-3 text-gray-200 font-medium">Git</span>
           </div>
 
           {/* Figma */}
-          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
             <SiFigma className="text-pink-500 text-5xl" />
             <span className="mt-3 text-gray-200 font-medium">Figma</span>
           </div>
 
           {/* VS Code */}
-          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-500/30 hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
             <VscVscodeInsiders className="text-blue-500 text-5xl" />
             <span className="mt-3 text-gray-200 font-medium">VS Code</span>
           </div>
