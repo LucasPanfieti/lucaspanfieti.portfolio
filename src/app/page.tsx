@@ -108,14 +108,14 @@ export default function Home() {
           >
             Sobre
           </a>
-          |
+          <span className="text-gray-600">|</span>
           <a
             href="#projetos"
             className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
           >
             Projetos
           </a>
-          |
+          <span className="text-gray-600">|</span>
           <a
             href="#habilidades"
             className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
