@@ -94,6 +94,17 @@ const projects = [
 // constante com certificados
 const certificados = [
   {
+    name: "Tecnólogo - Análise e Desenvolvimento de Sistemas",
+    instituicao: "Anhanguera",
+    data: "Cursando último semestre",
+    description: "",
+    horas: "",
+    image: "/images/certificados/AAA.jpg",
+    link: "",
+    icon: "/images/certificados/aa.ico",
+    colorIcon: "#f14e12",
+  },
+  {
     name: "Web Frontend Completo: HTML, CSS, JS, TS, React e Next 2025",
     instituicao: "Udemy",
     data: "Cursando",
@@ -121,7 +132,7 @@ const certificados = [
     data: "Março 2024",
     description: "Código da credencial 82E23CA4-81E8 41A8-84F3-19507D053D4E",
     horas: "5h",
-    image: "/images/certificados/poo.jpg",
+    image: "/images/certificados/bb.jpg",
     link: "https://www.linkedin.com/in/lucas-panfieti/details/certifications/1712012044447/single-media-viewer/?type=DOCUMENT&profileId=ACoAAC7PsTwBuuMPqYZPH7WMySMIlP3eK8iUghE",
     icon: "/images/certificados/iconFundacaoBradesco2.png",
     colorIcon: "#cc082e",
@@ -132,7 +143,7 @@ const certificados = [
     data: "Janeiro 2024",
     description: "Código da credencial 7534DAAE-EE6E-4904-A4CF-4469FFB5163D",
     horas: "18h",
-    image: "/images/certificados/py.jpg",
+    image: "/images/certificados/bb.jpg",
     link: "https://www.linkedin.com/in/lucas-panfieti/details/certifications/1712012109986/single-media-viewer?type=DOCUMENT&profileId=ACoAAC7PsTwBuuMPqYZPH7WMySMIlP3eK8iUghE&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B69KWPS%2B5TcO1B1%2BCR6Kz2Q%3D%3D",
     icon: "/images/certificados/iconFundacaoBradesco2.png",
     colorIcon: "#cc082e",
@@ -142,47 +153,8 @@ const certificados = [
 export default function Home() {
   return (
     <main className="pt-20 min-h-screen bg-gray-900 text-gray-100">
+      {/* Cabeçalho */}
       <Header />
-
-      {/* Linha verde no topo */}
-      {/* <div className="w-full h-1 bg-green-400 fixed top-0 left-0 z-50"></div> */}
-
-      {/* Header */}
-      {/* <header className="p-6 bg-gray-800 shadow-md flex justify-between  items-center flex-col-425">
-        <h1 className="text-3xl font-bold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full">
-          Lucas <span className="text-green-400">Panfieti</span>
-        </h1>
-
-        <nav className="flex gap-4 items-center flex-wrap">
-          <a
-            href="#sobre"
-            className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
-          >
-            Sobre
-          </a>
-          <span className="text-gray-600">|</span>
-          <a
-            href="#projetos"
-            className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
-          >
-            Projetos
-          </a>
-          <span className="text-gray-600">|</span>
-          <a
-            href="#habilidades"
-            className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
-          >
-            Habilidades
-          </a>
-          <span className="text-gray-600">|</span>
-          <a
-            href="#certificados"
-            className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
-          >
-            Certificados
-          </a>
-        </nav>
-      </header> */}
 
       <div className="flex flex-wrap justify-center items-center mt-14 mb-4 gap-2 lg:mt-12 lg:mb-12 xl:gap-20">
         <FadeInSection>
@@ -431,11 +403,11 @@ export default function Home() {
 
       {/* Certificados */}
       <section
-        id="certificados"
+        id="cursos"
         className="p-10 text-center scroll-mt-20 bg-gray-800"
       >
         <h2 className="text-3xl font-semibold text-center text-green-400">
-          Certificados
+          Cursos
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
           {certificados.map((certificado) => (
@@ -479,10 +451,12 @@ export default function Home() {
               <h2 className="font-bold text-lg mt-2">{certificado.name}</h2>
 
               {/* Carga horária */}
-              <p className="text-gray-400 mt-2">
-                Carga Horária:{" "}
-                <span className="text-gray-200">{certificado.horas}</span>
-              </p>
+              {certificado.horas && (
+                <p className="text-gray-400 mt-2">
+                  Carga Horária:{" "}
+                  <span className="text-gray-200">{certificado.horas}</span>
+                </p>
+              )}
 
               {/* Link para visualizar */}
               {certificado.link && (
