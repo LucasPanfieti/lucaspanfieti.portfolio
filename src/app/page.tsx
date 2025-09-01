@@ -21,13 +21,11 @@ import {
 } from "react-icons/si";
 import { RiShareBoxFill } from "react-icons/ri";
 import { VscVscodeInsiders } from "react-icons/vsc";
-import FadeInSection from "@/components/FadeInSection";
 
 import Header from "@/components/Header";
 import Contato from "@/components/Contato";
-import FotoPerfil from "@/components/FotoPerfil";
-import SobreMim from "@/components/SobreMim";
 import Footer from "@/components/Footer";
+import Sobre from "@/components/Sobre";
 
 // constante com projetos
 const projects = [
@@ -157,17 +155,8 @@ export default function Home() {
       {/* Cabeçalho */}
       <Header />
 
-      <div className="flex flex-wrap justify-center items-center mt-14 mb-4 gap-2 lg:mt-12 lg:mb-12 xl:gap-20">
-        {/* Animação */}
-        <FadeInSection>
-          {/* Foto de perfil */}
-          <FotoPerfil />
-        </FadeInSection>
-        <FadeInSection>
-          {/* Sobre mim */}
-          <SobreMim />
-        </FadeInSection>
-      </div>
+      {/* Sobre */}
+      <Sobre />
 
       {/* Projetos */}
       <section
