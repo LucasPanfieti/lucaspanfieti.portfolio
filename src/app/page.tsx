@@ -1,9 +1,7 @@
 import Image from "next/image";
+
 import {
   FaGithub,
-  FaLinkedin,
-  FaDownload,
-  FaEnvelope,
   FaHtml5,
   FaCss3Alt,
   FaReact,
@@ -22,11 +20,14 @@ import {
   SiFigma,
 } from "react-icons/si";
 import { RiShareBoxFill } from "react-icons/ri";
-
 import { VscVscodeInsiders } from "react-icons/vsc";
 import FadeInSection from "@/components/FadeInSection";
+
 import Header from "@/components/Header";
 import Contato from "@/components/Contato";
+import FotoPerfil from "@/components/FotoPerfil";
+import SobreMim from "@/components/SobreMim";
+import Footer from "@/components/Footer";
 
 // constante com projetos
 const projects = [
@@ -157,81 +158,14 @@ export default function Home() {
       <Header />
 
       <div className="flex flex-wrap justify-center items-center mt-14 mb-4 gap-2 lg:mt-12 lg:mb-12 xl:gap-20">
+        {/* Animação */}
         <FadeInSection>
           {/* Foto de perfil */}
-          <section className="flex flex-col items-center justify-center">
-            <Image
-              src="/images/perfil.png" // coloque sua foto na pasta public/images
-              alt="Foto de perfil"
-              width={300}
-              height={300}
-              className="rounded-full border-4 border-green-400 shadow-lg hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300"
-            />
-          </section>
+          <FotoPerfil />
         </FadeInSection>
         <FadeInSection>
-          {/* Sobre */}
-          <section id="sobre" className="p-10 text-center scroll-mt-20">
-            <h2 className="text-3xl font-semibold text-green-400">Sobre mim</h2>
-            <p className="mt-6 max-w-2xl mx-auto text-gray-300 text-justify">
-              Olá! 👋 Meu nome é{" "}
-              <span className="text-green-400">Lucas Panfieti</span>, sou{" "}
-              <span className="text-green-400">
-                estagiário em desenvolvimento de software
-              </span>{" "}
-              e estudante de{" "}
-              <span className="text-green-400">
-                Análise e Desenvolvimento de Sistemas
-              </span>{" "}
-              no último semestre. Tenho foco em{" "}
-              <span className="text-green-400">desenvolvimento front-end</span>,
-              com tecnologias como{" "}
-              <span className="text-green-400">
-                HTML, CSS, JavaScript, TypeScript, React, Next.js e Tailwind CSS
-              </span>
-              . Estou sempre buscando desafios práticos e formas de aprimorar
-              minhas habilidades.
-            </p>
-
-            <a
-              href="/Lucas_Panfieti_CV.pdf"
-              download
-              className="mt-10 mb-4 inline-flex items-center gap-2 bg-green-400 text-gray-900 font-semibold px-6 py-2 rounded-lg hover:bg-green-600  hover:shadow-green-400 hover:scale-105 transition-transform duration-300
-"
-            >
-              <FaDownload /> Baixar Currículo
-            </a>
-
-            <div className="pt-6 flex gap-6 justify-center 3 ">
-              {/* <h2 className="text-xl font-semibold text-green-400">Contatos</h2> */}
-              {/* E-mail */}
-
-              <a
-                href="mailto:lucaspanfieti@gmail.com"
-                className="bg-gray-700 hover:bg-green-400 p-3 rounded-full text-white hover:text-gray-900 transition"
-              >
-                <FaEnvelope />
-              </a>
-
-              {/* GitHub */}
-              <a
-                href="https://github.com/LucasPanfieti"
-                target="_blank"
-                className="bg-gray-700 hover:bg-green-400 p-3 rounded-full text-white hover:text-gray-900 transition"
-              >
-                <FaGithub />
-              </a>
-
-              {/* LinkedIn */}
-              <a
-                href="https://www.linkedin.com/in/lucas-panfieti/"
-                target="_blank"
-                className="bg-gray-700 hover:bg-green-400 p-3 rounded-full text-white hover:text-gray-900 transition"
-              >
-                <FaLinkedin />
-              </a>
-            </div>
-          </section>
+          {/* Sobre mim */}
+          <SobreMim />
         </FadeInSection>
       </div>
 
@@ -243,7 +177,7 @@ export default function Home() {
         <h2 className="text-3xl font-semibold text-center text-green-400">
           Projetos
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 ">
           {projects.map((project) => (
             <div
               key={project.name}
@@ -401,7 +335,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certificados */}
+      {/* Cursos */}
       <section
         id="cursos"
         className="p-10 text-center scroll-mt-20 bg-gray-800"
@@ -409,7 +343,7 @@ export default function Home() {
         <h2 className="text-3xl font-semibold text-center text-green-400">
           Cursos
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {certificados.map((certificado) => (
             <div
               key={certificado.name}
@@ -481,12 +415,7 @@ export default function Home() {
       <Contato />
 
       {/* Footer */}
-      <footer id="direitos" className="p-6 bg-gray-950 text-center">
-        {/* Direitos reservados */}
-        <p className="text-gray-500 ">
-          © 2025 Lucas Panfieti. Todos os direitos reservados.
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 }
