@@ -5,13 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const sections = [
-    "sobre",
-    "projetos",
-    "habilidades",
-    "certificados",
-    "contato",
-  ];
+  const sections = ["sobre", "projetos", "habilidades", "cursos", "contato"];
 
   return (
     <>

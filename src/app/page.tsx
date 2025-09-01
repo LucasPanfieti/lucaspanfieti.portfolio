@@ -94,6 +94,17 @@ const projects = [
 // constante com certificados
 const certificados = [
   {
+    name: "Tecnólogo - Análise e Desenvolvimento de Sistemas",
+    instituicao: "Anhanguera",
+    data: "Cursando último semestre",
+    description: "",
+    horas: "",
+    image: "/images/certificados/AAA.jpg",
+    link: "",
+    icon: "/images/certificados/aa.ico",
+    colorIcon: "#f14e12",
+  },
+  {
     name: "Web Frontend Completo: HTML, CSS, JS, TS, React e Next 2025",
     instituicao: "Udemy",
     data: "Cursando",
@@ -121,7 +132,7 @@ const certificados = [
     data: "Março 2024",
     description: "Código da credencial 82E23CA4-81E8 41A8-84F3-19507D053D4E",
     horas: "5h",
-    image: "/images/certificados/poo.jpg",
+    image: "/images/certificados/bb.jpg",
     link: "https://www.linkedin.com/in/lucas-panfieti/details/certifications/1712012044447/single-media-viewer/?type=DOCUMENT&profileId=ACoAAC7PsTwBuuMPqYZPH7WMySMIlP3eK8iUghE",
     icon: "/images/certificados/iconFundacaoBradesco2.png",
     colorIcon: "#cc082e",
@@ -132,7 +143,7 @@ const certificados = [
     data: "Janeiro 2024",
     description: "Código da credencial 7534DAAE-EE6E-4904-A4CF-4469FFB5163D",
     horas: "18h",
-    image: "/images/certificados/py.jpg",
+    image: "/images/certificados/bb.jpg",
     link: "https://www.linkedin.com/in/lucas-panfieti/details/certifications/1712012109986/single-media-viewer?type=DOCUMENT&profileId=ACoAAC7PsTwBuuMPqYZPH7WMySMIlP3eK8iUghE&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B69KWPS%2B5TcO1B1%2BCR6Kz2Q%3D%3D",
     icon: "/images/certificados/iconFundacaoBradesco2.png",
     colorIcon: "#cc082e",
@@ -431,11 +442,11 @@ export default function Home() {
 
       {/* Certificados */}
       <section
-        id="certificados"
+        id="cursos"
         className="p-10 text-center scroll-mt-20 bg-gray-800"
       >
         <h2 className="text-3xl font-semibold text-center text-green-400">
-          Certificados
+          Cursos
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
           {certificados.map((certificado) => (
@@ -479,10 +490,12 @@ export default function Home() {
               <h2 className="font-bold text-lg mt-2">{certificado.name}</h2>
 
               {/* Carga horária */}
-              <p className="text-gray-400 mt-2">
-                Carga Horária:{" "}
-                <span className="text-gray-200">{certificado.horas}</span>
-              </p>
+              {certificado.horas && (
+                <p className="text-gray-400 mt-2">
+                  Carga Horária:{" "}
+                  <span className="text-gray-200">{certificado.horas}</span>
+                </p>
+              )}
 
               {/* Link para visualizar */}
               {certificado.link && (
