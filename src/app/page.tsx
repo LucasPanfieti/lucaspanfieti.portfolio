@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { FaUser, FaProjectDiagram, FaTools } from "react-icons/fa";
 import {
   FaGithub,
   FaLinkedin,
@@ -16,15 +15,16 @@ import {
   SiTailwindcss,
   SiJavascript,
   SiVercel,
+  SiHtml5,
+  SiCss3,
+  SiReact,
+  SiGit,
+  SiFigma,
 } from "react-icons/si";
 import { RiShareBoxFill } from "react-icons/ri";
 
-import { SiHtml5, SiCss3, SiReact } from "react-icons/si";
-import { SiGit, SiFigma } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
-import { FaRegUser } from "react-icons/fa";
-import { CgCode } from "react-icons/cg";
-import { TbTools } from "react-icons/tb";
+import FadeInSection from "@/components/FadeInSection";
 
 // constante com projetos
 const projects = [
@@ -89,6 +89,54 @@ const projects = [
   },
 ];
 
+// constante com certificados
+const certificados = [
+  {
+    name: "Web Frontend Completo: HTML, CSS, JS, TS, React e Next 2025",
+    instituicao: "Udemy",
+    data: "Cursando",
+    description: "",
+    horas: "75h",
+    image: "/images/certificados/front.webp",
+    link: "",
+    icon: "/images/certificados/iconUdemy.png",
+    colorIcon: "#a13df0",
+  },
+  {
+    name: "Git e GitHub do básico ao avançado",
+    instituicao: "Udemy",
+    data: "Cursando",
+    description: "",
+    horas: "8h",
+    image: "/images/certificados/git.webp",
+    link: "",
+    icon: "/images/certificados/iconUdemy.png",
+    colorIcon: "#a13df0",
+  },
+  {
+    name: "Introdução a Programação Orientada a Objetos (POO)",
+    instituicao: "Fundação Bradesco",
+    data: "Março 2024",
+    description: "Código da credencial 82E23CA4-81E8 41A8-84F3-19507D053D4E",
+    horas: "5h",
+    image: "/images/certificados/poo.jpg",
+    link: "https://www.linkedin.com/in/lucas-panfieti/details/certifications/1712012044447/single-media-viewer/?type=DOCUMENT&profileId=ACoAAC7PsTwBuuMPqYZPH7WMySMIlP3eK8iUghE",
+    icon: "/images/certificados/iconFundacaoBradesco2.png",
+    colorIcon: "#cc082e",
+  },
+  {
+    name: "Linguagem de Programação Python - Básico",
+    instituicao: "Fundação Bradesco",
+    data: "Janeiro 2024",
+    description: "Código da credencial 7534DAAE-EE6E-4904-A4CF-4469FFB5163D",
+    horas: "18h",
+    image: "/images/certificados/py.jpg",
+    link: "https://www.linkedin.com/in/lucas-panfieti/details/certifications/1712012109986/single-media-viewer?type=DOCUMENT&profileId=ACoAAC7PsTwBuuMPqYZPH7WMySMIlP3eK8iUghE&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B69KWPS%2B5TcO1B1%2BCR6Kz2Q%3D%3D",
+    icon: "/images/certificados/iconFundacaoBradesco2.png",
+    colorIcon: "#cc082e",
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-900 text-gray-100">
@@ -96,12 +144,12 @@ export default function Home() {
       <div className="w-full h-1 bg-green-400 fixed top-0 left-0 z-50"></div>
 
       {/* Header */}
-      <header className="p-6 bg-gray-800 shadow-md flex justify-between items-center flex-col-425">
+      <header className="p-6 bg-gray-800 shadow-md flex justify-between  items-center flex-col-425">
         <h1 className="text-3xl font-bold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full">
           Lucas <span className="text-green-400">Panfieti</span>
         </h1>
 
-        <nav className="flex gap-4 items-center">
+        <nav className="flex gap-4 items-center flex-wrap">
           <a
             href="#sobre"
             className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
@@ -122,83 +170,93 @@ export default function Home() {
           >
             Habilidades
           </a>
+          <span className="text-gray-600">|</span>
+          <a
+            href="#certificados"
+            className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
+          >
+            Certificados
+          </a>
         </nav>
       </header>
 
       <div className="flex flex-wrap justify-center items-center mt-14 mb-4 gap-2 lg:mt-12 lg:mb-12 xl:gap-20">
-        {/* Foto de perfil */}
-        <section className="flex flex-col items-center justify-center">
-          <Image
-            src="/images/perfil.png" // coloque sua foto na pasta public/images
-            alt="Foto de perfil"
-            width={300}
-            height={300}
-            className="rounded-full border-4 border-green-400 shadow-lg hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300"
-          />
-        </section>
+        <FadeInSection>
+          {/* Foto de perfil */}
+          <section className="flex flex-col items-center justify-center">
+            <Image
+              src="/images/perfil.png" // coloque sua foto na pasta public/images
+              alt="Foto de perfil"
+              width={300}
+              height={300}
+              className="rounded-full border-4 border-green-400 shadow-lg hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300"
+            />
+          </section>
+        </FadeInSection>
+        <FadeInSection>
+          {/* Sobre */}
+          <section id="sobre" className="p-10 text-center ">
+            <h2 className="text-2xl font-semibold text-green-400">Sobre mim</h2>
+            <p className="mt-6 max-w-2xl mx-auto text-gray-300 text-justify">
+              Olá! 👋 Meu nome é{" "}
+              <span className="text-green-400">Lucas Panfieti</span>, sou{" "}
+              <span className="text-green-400">
+                estagiário em desenvolvimento de software
+              </span>{" "}
+              e estudante de{" "}
+              <span className="text-green-400">
+                Análise e Desenvolvimento de Sistemas
+              </span>{" "}
+              no último semestre. Tenho foco em{" "}
+              <span className="text-green-400">desenvolvimento front-end</span>,
+              com tecnologias como{" "}
+              <span className="text-green-400">
+                HTML, CSS, JavaScript, TypeScript, React, Next.js e Tailwind CSS
+              </span>
+              . Estou sempre buscando desafios práticos e formas de aprimorar
+              minhas habilidades.
+            </p>
 
-        {/* Sobre */}
-        <section id="sobre" className="p-10 text-center ">
-          <h2 className="text-2xl font-semibold text-green-400">Sobre mim</h2>
-          <p className="mt-6 max-w-2xl mx-auto text-gray-300 text-justify">
-            Olá! 👋 Meu nome é{" "}
-            <span className="text-green-400">Lucas Panfieti</span>, sou{" "}
-            <span className="text-green-400">
-              estagiário em desenvolvimento de software
-            </span>{" "}
-            e estudante de{" "}
-            <span className="text-green-400">
-              Análise e Desenvolvimento de Sistemas
-            </span>{" "}
-            no último semestre. Tenho foco em{" "}
-            <span className="text-green-400">desenvolvimento front-end</span>,
-            com tecnologias como{" "}
-            <span className="text-green-400">
-              HTML, CSS, JavaScript, TypeScript, React, Next.js e Tailwind CSS
-            </span>
-            . Estou sempre buscando desafios práticos e formas de aprimorar
-            minhas habilidades.
-          </p>
-
-          <a
-            href="/Lucas_Panfieti_CV.pdf"
-            download
-            className="mt-10 mb-4 inline-flex items-center gap-2 bg-green-400 text-gray-900 font-semibold px-6 py-2 rounded-lg hover:bg-green-600  hover:shadow-green-400 hover:scale-105 transition-transform duration-300
+            <a
+              href="/Lucas_Panfieti_CV.pdf"
+              download
+              className="mt-10 mb-4 inline-flex items-center gap-2 bg-green-400 text-gray-900 font-semibold px-6 py-2 rounded-lg hover:bg-green-600  hover:shadow-green-400 hover:scale-105 transition-transform duration-300
 "
-          >
-            <FaDownload /> Baixar Currículo
-          </a>
-
-          <div className="pt-6 flex gap-6 justify-center text-2xl ">
-            {/* <h2 className="text-xl font-semibold text-green-400">Contatos</h2> */}
-            {/* E-mail */}
-
-            <a
-              href="mailto:lucaspanfieti@gmail.com"
-              className="hover:text-green-400 hover:shadow-green-400/30 hover:scale-110 transition-transform duration-200"
             >
-              <FaEnvelope />
+              <FaDownload /> Baixar Currículo
             </a>
 
-            {/* GitHub */}
-            <a
-              href="https://github.com/LucasPanfieti"
-              target="_blank"
-              className="hover:text-green-400 hover:shadow-green-400/30 hover:scale-110 transition-transform duration-200"
-            >
-              <FaGithub />
-            </a>
+            <div className="pt-6 flex gap-6 justify-center text-2xl ">
+              {/* <h2 className="text-xl font-semibold text-green-400">Contatos</h2> */}
+              {/* E-mail */}
 
-            {/* LinkedIn */}
-            <a
-              href="https://www.linkedin.com/in/lucas-panfieti/"
-              target="_blank"
-              className="hover:text-green-400 hover:shadow-green-400/30 hover:scale-110 transition-transform duration-200"
-            >
-              <FaLinkedin />
-            </a>
-          </div>
-        </section>
+              <a
+                href="mailto:lucaspanfieti@gmail.com"
+                className="hover:text-green-400 hover:shadow-green-400/30 hover:scale-110 transition-transform duration-200"
+              >
+                <FaEnvelope />
+              </a>
+
+              {/* GitHub */}
+              <a
+                href="https://github.com/LucasPanfieti"
+                target="_blank"
+                className="hover:text-green-400 hover:shadow-green-400/30 hover:scale-110 transition-transform duration-200"
+              >
+                <FaGithub />
+              </a>
+
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/lucas-panfieti/"
+                target="_blank"
+                className="hover:text-green-400 hover:shadow-green-400/30 hover:scale-110 transition-transform duration-200"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+          </section>
+        </FadeInSection>
       </div>
 
       {/* Projetos */}
@@ -356,6 +414,77 @@ export default function Home() {
             <VscVscodeInsiders className="text-blue-500 text-5xl" />
             <span className="mt-3 text-gray-200 font-medium">VS Code</span>
           </div>
+        </div>
+      </section>
+
+      {/* Certificados */}
+      <section id="certificados" className="p-10 bg-gray-800">
+        <h2 className="text-2xl font-semibold text-center text-green-400">
+          Certificados
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+          {certificados.map((certificado) => (
+            <div
+              key={certificado.name}
+              className="p-4 border border-gray-700 rounded-xl bg-gray-900 shadow hover:shadow-lg hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300"
+            >
+              {/* Data */}
+              <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
+                <FaRegCalendarAlt />
+                <span>{certificado.data}</span>
+              </div>
+
+              {/* Imagem */}
+              <Image
+                src={certificado.image}
+                alt={certificado.name}
+                width={400}
+                height={200}
+                className="w-full h-40 object-cover rounded-md mb-3"
+              />
+
+              {/* Nome e instituição */}
+              <div className="flex items-center gap-2 mt-1">
+                {certificado.icon && (
+                  <Image
+                    src={certificado.icon}
+                    alt={certificado.instituicao}
+                    width={25}
+                    height={25}
+                    className="rounded-full"
+                  />
+                )}
+                <span
+                  className="text-base"
+                  style={{ color: certificado.colorIcon }}
+                >
+                  {certificado.instituicao}
+                </span>
+              </div>
+              <h2 className="font-bold text-lg mt-2">{certificado.name}</h2>
+
+              {/* Carga horária */}
+              <p className="text-gray-400 mt-2">
+                Carga Horária:{" "}
+                <span className="text-gray-200">{certificado.horas}</span>
+              </p>
+
+              {/* Link para visualizar */}
+              {certificado.link && (
+                <div className="flex justify-center mt-4">
+                  <a
+                    href={certificado.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center justify-center gap-2 bg-green-400 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition mx-auto"
+                  >
+                    <RiShareBoxFill />
+                    Ver Certificado
+                  </a>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 
