@@ -291,8 +291,10 @@ export default function Home() {
                 height={200} // altura original da imagem
                 className="w-full h-40 object-cover rounded-md mb-3"
               />
-              <h3 className="font-bold text-lg">{project.name}</h3>
-              <p className="text-gray-400 mt-2">{project.description}</p>
+              <h3 className="font-bold text-lg text-left">{project.name}</h3>
+              <p className="text-gray-400 mt-2 text-justify">
+                {project.description}
+              </p>
               <div className="flex items-center gap-3 mt-3 text-xl">
                 {project.techs?.includes("html") && (
                   <FaHtml5 className="text-orange-500" />
@@ -439,7 +441,7 @@ export default function Home() {
           {certificados.map((certificado) => (
             <div
               key={certificado.name}
-              className="p-4 border border-gray-700 rounded-xl bg-gray-900 shadow hover:shadow-lg hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300"
+              className="text-left p-4 border border-gray-700 rounded-xl bg-gray-900 shadow hover:shadow-lg hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300"
             >
               {/* Data */}
               <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
