@@ -153,47 +153,8 @@ const certificados = [
 export default function Home() {
   return (
     <main className="pt-20 min-h-screen bg-gray-900 text-gray-100">
+      {/* Cabeçalho */}
       <Header />
-
-      {/* Linha verde no topo */}
-      {/* <div className="w-full h-1 bg-green-400 fixed top-0 left-0 z-50"></div> */}
-
-      {/* Header */}
-      {/* <header className="p-6 bg-gray-800 shadow-md flex justify-between  items-center flex-col-425">
-        <h1 className="text-3xl font-bold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full">
-          Lucas <span className="text-green-400">Panfieti</span>
-        </h1>
-
-        <nav className="flex gap-4 items-center flex-wrap">
-          <a
-            href="#sobre"
-            className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
-          >
-            Sobre
-          </a>
-          <span className="text-gray-600">|</span>
-          <a
-            href="#projetos"
-            className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
-          >
-            Projetos
-          </a>
-          <span className="text-gray-600">|</span>
-          <a
-            href="#habilidades"
-            className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
-          >
-            Habilidades
-          </a>
-          <span className="text-gray-600">|</span>
-          <a
-            href="#certificados"
-            className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full"
-          >
-            Certificados
-          </a>
-        </nav>
-      </header> */}
 
       <div className="flex flex-wrap justify-center items-center mt-14 mb-4 gap-2 lg:mt-12 lg:mb-12 xl:gap-20">
         <FadeInSection>
