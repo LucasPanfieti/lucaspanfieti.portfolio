@@ -25,6 +25,8 @@ import { RiShareBoxFill } from "react-icons/ri";
 
 import { VscVscodeInsiders } from "react-icons/vsc";
 import FadeInSection from "@/components/FadeInSection";
+import Header from "@/components/Header";
+import Contato from "@/components/Contato";
 
 // constante com projetos
 const projects = [
@@ -139,12 +141,14 @@ const certificados = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-100">
+    <main className="pt-20 min-h-screen bg-gray-900 text-gray-100">
+      <Header />
+
       {/* Linha verde no topo */}
-      <div className="w-full h-1 bg-green-400 fixed top-0 left-0 z-50"></div>
+      {/* <div className="w-full h-1 bg-green-400 fixed top-0 left-0 z-50"></div> */}
 
       {/* Header */}
-      <header className="p-6 bg-gray-800 shadow-md flex justify-between  items-center flex-col-425">
+      {/* <header className="p-6 bg-gray-800 shadow-md flex justify-between  items-center flex-col-425">
         <h1 className="text-3xl font-bold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-green-400 after:w-0 after:transition-all hover:after:w-full">
           Lucas <span className="text-green-400">Panfieti</span>
         </h1>
@@ -178,7 +182,7 @@ export default function Home() {
             Certificados
           </a>
         </nav>
-      </header>
+      </header> */}
 
       <div className="flex flex-wrap justify-center items-center mt-14 mb-4 gap-2 lg:mt-12 lg:mb-12 xl:gap-20">
         <FadeInSection>
@@ -195,8 +199,8 @@ export default function Home() {
         </FadeInSection>
         <FadeInSection>
           {/* Sobre */}
-          <section id="sobre" className="p-10 text-center ">
-            <h2 className="text-2xl font-semibold text-green-400">Sobre mim</h2>
+          <section id="sobre" className="p-10 text-center scroll-mt-20">
+            <h2 className="text-3xl font-semibold text-green-400">Sobre mim</h2>
             <p className="mt-6 max-w-2xl mx-auto text-gray-300 text-justify">
               Olá! 👋 Meu nome é{" "}
               <span className="text-green-400">Lucas Panfieti</span>, sou{" "}
@@ -226,13 +230,13 @@ export default function Home() {
               <FaDownload /> Baixar Currículo
             </a>
 
-            <div className="pt-6 flex gap-6 justify-center text-2xl ">
+            <div className="pt-6 flex gap-6 justify-center 3 ">
               {/* <h2 className="text-xl font-semibold text-green-400">Contatos</h2> */}
               {/* E-mail */}
 
               <a
                 href="mailto:lucaspanfieti@gmail.com"
-                className="hover:text-green-400 hover:shadow-green-400/30 hover:scale-110 transition-transform duration-200"
+                className="bg-gray-700 hover:bg-green-400 p-3 rounded-full text-white hover:text-gray-900 transition"
               >
                 <FaEnvelope />
               </a>
@@ -241,7 +245,7 @@ export default function Home() {
               <a
                 href="https://github.com/LucasPanfieti"
                 target="_blank"
-                className="hover:text-green-400 hover:shadow-green-400/30 hover:scale-110 transition-transform duration-200"
+                className="bg-gray-700 hover:bg-green-400 p-3 rounded-full text-white hover:text-gray-900 transition"
               >
                 <FaGithub />
               </a>
@@ -250,7 +254,7 @@ export default function Home() {
               <a
                 href="https://www.linkedin.com/in/lucas-panfieti/"
                 target="_blank"
-                className="hover:text-green-400 hover:shadow-green-400/30 hover:scale-110 transition-transform duration-200"
+                className="bg-gray-700 hover:bg-green-400 p-3 rounded-full text-white hover:text-gray-900 transition"
               >
                 <FaLinkedin />
               </a>
@@ -260,8 +264,11 @@ export default function Home() {
       </div>
 
       {/* Projetos */}
-      <section id="projetos" className="p-10 bg-gray-800">
-        <h2 className="text-2xl font-semibold text-center text-green-400">
+      <section
+        id="projetos"
+        className="p-10 text-center scroll-mt-20 bg-gray-800"
+      >
+        <h2 className="text-3xl font-semibold text-center text-green-400">
           Projetos
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ">
@@ -337,8 +344,11 @@ export default function Home() {
       </section>
 
       {/* Habilidades */}
-      <section id="habilidades" className="p-10 bg-gray-900">
-        <h2 className="text-2xl font-bold text-center text-green-400 mb-8">
+      <section
+        id="habilidades"
+        className="p-10 text-center scroll-mt-20 bg-gray-900"
+      >
+        <h2 className="text-3xl font-bold text-center text-green-400 mb-8">
           Habilidades
         </h2>
 
@@ -418,8 +428,11 @@ export default function Home() {
       </section>
 
       {/* Certificados */}
-      <section id="certificados" className="p-10 bg-gray-800">
-        <h2 className="text-2xl font-semibold text-center text-green-400">
+      <section
+        id="certificados"
+        className="p-10 text-center scroll-mt-20 bg-gray-800"
+      >
+        <h2 className="text-3xl font-semibold text-center text-green-400">
           Certificados
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
@@ -487,6 +500,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Contato */}
+      <Contato />
 
       {/* Footer */}
       <footer id="direitos" className="p-6 bg-gray-950 text-center">
