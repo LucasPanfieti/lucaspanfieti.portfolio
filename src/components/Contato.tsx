@@ -7,6 +7,7 @@ import {
   FaGithub,
   FaLinkedin,
 } from "react-icons/fa";
+import BtnSocial from "./BtnSocial";
 
 export default function Contato() {
   return (
@@ -42,61 +43,22 @@ export default function Contato() {
           <div>
             <h4 className="text-gray-100 mb-4">Redes Sociais</h4>
             <div className="flex gap-4 justify-center">
-              <a
+              {/* GitHub */}
+              <BtnSocial
                 href="https://github.com/LucasPanfieti"
                 target="_blank"
-                className="bg-gray-700 hover:bg-green-400 p-3 rounded-full text-white hover:text-gray-900 transition"
-              >
-                <FaGithub />
-              </a>
-              <a
+                icone={<FaGithub />}
+              />
+
+              {/* LinkedIn */}
+              <BtnSocial
                 href="https://www.linkedin.com/in/lucas-panfieti/"
                 target="_blank"
-                className="bg-gray-700 hover:bg-green-400 p-3 rounded-full text-white hover:text-gray-900 transition"
-              >
-                <FaLinkedin />
-              </a>
+                icone={<FaLinkedin />}
+              />
             </div>
           </div>
         </div>
-
-        {/* Formulário */}
-        {/* <form className="bg-gray-800 p-8 rounded-2xl shadow-lg flex flex-col gap-6">
-          <h3 className="text-xl font-semibold text-gray-100">
-            Envie uma Mensagem
-          </h3>
-
-          <input
-            type="text"
-            placeholder="Nome Completo *"
-            className="w-full p-3 rounded-lg bg-gray-900 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
-
-          <input
-            type="email"
-            placeholder="Email *"
-            className="w-full p-3 rounded-lg bg-gray-900 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
-
-          <input
-            type="text"
-            placeholder="Assunto *"
-            className="w-full p-3 rounded-lg bg-gray-900 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
-
-          <textarea
-            placeholder="Mensagem *"
-            rows={5}
-            className="w-full p-3 rounded-lg bg-gray-900 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400"
-          ></textarea>
-
-          <button
-            type="submit"
-            className="mt-3 inline-flex items-center justify-center gap-2 bg-green-400 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition mx-auto"
-          >
-            Enviar Mensagem
-          </button>
-        </form> */}
       </div>
     </section>
   );
