@@ -1,5 +1,7 @@
 import { FaGithub, FaLinkedin, FaDownload, FaEnvelope } from "react-icons/fa";
 
+import BtnSocial from "./BtnSocial";
+
 export default function SobreMim() {
   return (
     <section id="sobre" className="p-10 text-center scroll-mt-20">
@@ -34,33 +36,26 @@ export default function SobreMim() {
       </a>
 
       <div className="pt-6 flex gap-6 justify-center 3 ">
-        {/* <h2 className="text-xl font-semibold text-green-400">Contatos</h2> */}
         {/* E-mail */}
-
-        <a
+        <BtnSocial
           href="mailto:lucaspanfieti@gmail.com"
-          className="bg-gray-700 hover:bg-green-400 p-3 rounded-full text-white hover:text-gray-900 transition"
-        >
-          <FaEnvelope />
-        </a>
+          target="_blank"
+          icone={<FaEnvelope />}
+        />
 
         {/* GitHub */}
-        <a
+        <BtnSocial
           href="https://github.com/LucasPanfieti"
           target="_blank"
-          className="bg-gray-700 hover:bg-green-400 p-3 rounded-full text-white hover:text-gray-900 transition"
-        >
-          <FaGithub />
-        </a>
+          icone={<FaGithub />}
+        />
 
         {/* LinkedIn */}
-        <a
+        <BtnSocial
           href="https://www.linkedin.com/in/lucas-panfieti/"
           target="_blank"
-          className="bg-gray-700 hover:bg-green-400 p-3 rounded-full text-white hover:text-gray-900 transition"
-        >
-          <FaLinkedin />
-        </a>
+          icone={<FaLinkedin />}
+        />
       </div>
     </section>
   );
