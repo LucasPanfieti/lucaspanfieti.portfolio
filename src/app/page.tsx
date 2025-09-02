@@ -112,7 +112,7 @@ const certificados = [
     image: "/images/certificados/front.webp",
     link: "",
     icon: "/images/certificados/iconUdemy.png",
-    colorIcon: "#a13df0",
+    colorIcon: "#bf30f4",
   },
   {
     name: "Git e GitHub do básico ao avançado",
@@ -123,7 +123,7 @@ const certificados = [
     image: "/images/certificados/git.webp",
     link: "",
     icon: "/images/certificados/iconUdemy.png",
-    colorIcon: "#a13df0",
+    colorIcon: "#bf30f4",
   },
   {
     name: "Introdução a Programação Orientada a Objetos (POO)",
