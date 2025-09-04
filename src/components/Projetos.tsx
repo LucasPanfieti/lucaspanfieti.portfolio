@@ -92,7 +92,7 @@ export default function Projetos() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className="p-4 border border-gray-700 rounded-xl bg-gray-900 shadow hover:shadow-lg  hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300"
+            className="p-4 border border-gray-700 rounded-xl bg-gray-900 shadow hover:shadow-lg hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300"
           >
             {/* Data do projeto */}
             <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
