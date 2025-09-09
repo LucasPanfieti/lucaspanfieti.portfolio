@@ -31,11 +31,11 @@ const certificados = [
   {
     name: "Git e GitHub do básico ao avançado",
     instituicao: "Udemy",
-    data: "Cursando",
+    data: "Setembro 2025",
     description: "",
     horas: "8h",
     image: "/images/certificados/git.webp",
-    link: "",
+    link: "http://ude.my/UC-b0de4d4b-6822-4738-8fba-ba436d2a048e",
     icon: "/images/certificados/iconUdemy.png",
     colorIcon: "#bf30f4",
   },
