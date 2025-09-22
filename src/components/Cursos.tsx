@@ -12,9 +12,9 @@ const certificados = [
     data: "Cursando último semestre",
     description: "",
     horas: "",
-    image: "/images/certificados/AAA.jpg",
+    image: "/images/certificados/anhanguera.webp",
     link: "",
-    icon: "/images/certificados/aa.ico",
+    icon: "/images/certificados/iconAnhanguera.ico",
     colorIcon: "#f14e12",
   },
   {
@@ -25,7 +25,7 @@ const certificados = [
     horas: "75h",
     image: "/images/certificados/front.webp",
     link: "",
-    icon: "/images/certificados/iconUdemy.png",
+    icon: "/images/certificados/iconUdemy.webp",
     colorIcon: "#bf30f4",
   },
   {
@@ -36,7 +36,7 @@ const certificados = [
     horas: "8h",
     image: "/images/certificados/git.webp",
     link: "http://ude.my/UC-b0de4d4b-6822-4738-8fba-ba436d2a048e",
-    icon: "/images/certificados/iconUdemy.png",
+    icon: "/images/certificados/iconUdemy.webp",
     colorIcon: "#bf30f4",
   },
   {
@@ -45,9 +45,9 @@ const certificados = [
     data: "Março 2024",
     description: "Código da credencial 82E23CA4-81E8 41A8-84F3-19507D053D4E",
     horas: "5h",
-    image: "/images/certificados/bb.jpg",
+    image: "/images/certificados/bradesco.webp",
     link: "https://www.linkedin.com/in/lucas-panfieti/details/certifications/1712012044447/single-media-viewer/?type=DOCUMENT&profileId=ACoAAC7PsTwBuuMPqYZPH7WMySMIlP3eK8iUghE",
-    icon: "/images/certificados/iconFundacaoBradesco2.png",
+    icon: "/images/certificados/iconBradesco.webp",
     colorIcon: "#cc082e",
   },
   {
@@ -56,9 +56,9 @@ const certificados = [
     data: "Janeiro 2024",
     description: "Código da credencial 7534DAAE-EE6E-4904-A4CF-4469FFB5163D",
     horas: "18h",
-    image: "/images/certificados/bb.jpg",
+    image: "/images/certificados/bradesco.webp",
     link: "https://www.linkedin.com/in/lucas-panfieti/details/certifications/1712012109986/single-media-viewer?type=DOCUMENT&profileId=ACoAAC7PsTwBuuMPqYZPH7WMySMIlP3eK8iUghE&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B69KWPS%2B5TcO1B1%2BCR6Kz2Q%3D%3D",
-    icon: "/images/certificados/iconFundacaoBradesco2.png",
+    icon: "/images/certificados/iconBradesco.webp",
     colorIcon: "#cc082e",
   },
 ];

@@ -19,7 +19,7 @@ export default function FotoPerfil() {
           {/* Frente */}
           <div className="absolute inset-0 backface-hidden">
             <Image
-              src="/images/perfil.png"
+              src="/images/perfil.webp"
               alt="Foto de perfil frente"
               width={300}
               height={300}
@@ -30,7 +30,7 @@ export default function FotoPerfil() {
           {/* Verso */}
           <div className="absolute inset-0 rotate-y-180 backface-hidden">
             <Image
-              src="/images/perfil2.png"
+              src="/images/perfil2.webp"
               alt="Foto de perfil verso"
               width={300}
               height={300}
