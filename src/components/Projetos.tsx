@@ -19,6 +19,16 @@ import { RiShareBoxFill } from "react-icons/ri";
 // constante com projetos
 const projects = [
   {
+    name: "Gestão Financeira",
+    description:
+      "Projeto desenvolvido para ajudar no controle financeiro de forma simples e prática. O sistema permite cadastrar, visualizar e excluir transações, além de exibir o saldo atualizado do usuário. Conta também com sistema de login, registro e recuperação de senha, tudo funcionando com armazenamento local (LocalStorage) com design responsivo.",
+    link: "https://lucaspanfieti.github.io/app_financeiro/",
+    github: "https://github.com/LucasPanfieti/app_financeiro",
+    image: "/images/projetos/financeiro-app.webp",
+    techs: ["html", "tailwind", "js", "figma"],
+    date: "Novembro 2025",
+  },
+  {
     name: "Meu Portfólio",
     description:
       "Portfólio de Lucas Panfieti, feito com Next.js e com deploy na Vercel",
