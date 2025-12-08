@@ -20,7 +20,7 @@ const certificados = [
   {
     name: "Tecnólogo - Análise e Desenvolvimento de Sistemas",
     instituicao: "Anhanguera",
-    data: "Dezenbro 2025",
+    data: "Dezembro 2025",
     description: "",
     horas: "",
     image: "/images/certificados/anhanguera.webp",
