@@ -7,17 +7,6 @@ import { RiShareBoxFill } from "react-icons/ri";
 // constante com certificados
 const certificados = [
   {
-    name: "Tecnólogo - Análise e Desenvolvimento de Sistemas",
-    instituicao: "Anhanguera",
-    data: "Cursando último semestre",
-    description: "",
-    horas: "",
-    image: "/images/certificados/anhanguera.webp",
-    link: "",
-    icon: "/images/certificados/iconAnhanguera.ico",
-    colorIcon: "#f14e12",
-  },
-  {
     name: "Web Frontend Completo: HTML, CSS, JS, TS, React e Next 2025",
     instituicao: "Udemy",
     data: "Cursando",
@@ -27,6 +16,17 @@ const certificados = [
     link: "",
     icon: "/images/certificados/iconUdemy.webp",
     colorIcon: "#bf30f4",
+  },
+  {
+    name: "Tecnólogo - Análise e Desenvolvimento de Sistemas",
+    instituicao: "Anhanguera",
+    data: "Dezembro 2025",
+    description: "",
+    horas: "",
+    image: "/images/certificados/anhanguera.webp",
+    link: "",
+    icon: "/images/certificados/iconAnhanguera.ico",
+    colorIcon: "#f14e12",
   },
   {
     name: "Git e GitHub do básico ao avançado",

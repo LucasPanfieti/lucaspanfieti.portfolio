@@ -8,15 +8,13 @@ export default function SobreMim() {
       <h2 className="text-3xl font-semibold text-green-400">Sobre mim</h2>
       <p className="mt-6 max-w-2xl mx-auto text-gray-300 text-justify">
         Olá! 👋 Meu nome é{" "}
-        <span className="text-green-400">Lucas Panfieti</span>, sou{" "}
-        <span className="text-green-400">
-          estagiário em desenvolvimento de software
-        </span>{" "}
-        e estudante de{" "}
+        <span className="text-green-400">Lucas Panfieti</span>, atuo hoje como{" "}
+        <span className="text-green-400">Software Developer</span> e sou formado
+        em{" "}
         <span className="text-green-400">
           Análise e Desenvolvimento de Sistemas
-        </span>{" "}
-        no último semestre. Tenho foco em{" "}
+        </span>
+        . Tenho foco em{" "}
         <span className="text-green-400">desenvolvimento front-end</span>, com
         tecnologias como{" "}
         <span className="text-green-400">
