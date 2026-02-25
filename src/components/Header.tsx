@@ -63,7 +63,7 @@ export default function Header() {
               {/* P */}
               <span
                 className={`text-green-400 transition-all duration-500 ease-in-out ${
-                  isScrolled ? "translate-y-[0.24em]" : "translate-y-0"
+                  isScrolled ? "translate-y-[0.12em]" : "translate-y-0"
                 }`}
               >
                 P
