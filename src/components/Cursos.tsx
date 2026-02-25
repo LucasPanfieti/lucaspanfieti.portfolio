@@ -20,11 +20,11 @@ const certificados = [
   {
     name: "Tecnólogo - Análise e Desenvolvimento de Sistemas",
     instituicao: "Anhanguera",
-    data: "Dezembro 2025",
+    data: "Ago 2023 - Dez 2025",
     description: "",
-    horas: "",
+    horas: "2100h",
     image: "/images/certificados/anhanguera.webp",
-    link: "",
+    link: "https://www.linkedin.com/in/lucas-panfieti/overlay/Education/906515643/treasury/?profileId=ACoAAC7PsTwBuuMPqYZPH7WMySMIlP3eK8iUghE",
     icon: "/images/certificados/iconAnhanguera.ico",
     colorIcon: "#f14e12",
   },
@@ -87,7 +87,7 @@ export default function Cursos() {
               alt={certificado.name}
               width={400}
               height={200}
-              className="w-full h-40 object-cover rounded-md mb-3"
+              className="w-full h-fit object-contain rounded-lg mb-3"
             />
 
             {/* Nome e instituição */}
@@ -98,7 +98,7 @@ export default function Cursos() {
                   alt={certificado.instituicao}
                   width={25}
                   height={25}
-                  className="rounded-full"
+                  className="w-6 h-6 object-contain"
                 />
               )}
               <span
@@ -125,7 +125,7 @@ export default function Cursos() {
                   href={certificado.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center justify-center gap-2 bg-green-400 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition mx-auto"
+                  className="mt-3 mb-2 inline-flex items-center justify-center gap-2 bg-green-400 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition mx-auto"
                 >
                   <RiShareBoxFill />
                   Ver Certificado
