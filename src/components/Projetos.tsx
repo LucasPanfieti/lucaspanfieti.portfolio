@@ -34,7 +34,7 @@ const projects = [
       "Portfólio de Lucas Panfieti, feito com Next.js e com deploy na Vercel",
     link: "https://lucaspanfieti-portfolio.vercel.app/",
     github: "https://github.com/LucasPanfieti/lucaspanfieti.portfolio",
-    image: "/images/projetos/preview.webp",
+    image: "/images/projetos/portifolio.webp",
     techs: ["next", "react", "vercel", "tailwind", "ts"],
     date: "Agosto 2025",
   },
@@ -102,7 +102,7 @@ export default function Projetos() {
         {projects.map((project) => (
           <div
             key={project.name}
-            className="p-4 border border-gray-700 rounded-xl bg-gray-900 shadow hover:shadow-lg hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300"
+            className="p-6 border border-gray-700 rounded-xl bg-gray-900 shadow hover:shadow-lg hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300 "
           >
             {/* Data do projeto */}
             <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
@@ -115,7 +115,7 @@ export default function Projetos() {
               alt={project.name}
               width={400} // largura original da imagem
               height={200} // altura original da imagem
-              className="w-full h-40 object-cover rounded-md mb-3"
+              className="w-full h-fit object-contain rounded-lg mb-3 border-1 border-gray-800"
             />
             <h3 className="font-bold text-lg text-left">{project.name}</h3>
             <p className="text-gray-400 mt-2 text-justify">
@@ -151,7 +151,7 @@ export default function Projetos() {
               <a
                 href={project.link}
                 target="_blank"
-                className="mt-3 inline-flex items-center justify-center gap-2 bg-green-400 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition mx-auto"
+                className="mt-4 mb-2 inline-flex items-center justify-center gap-2 bg-green-400 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition mx-auto"
               >
                 <RiShareBoxFill />
                 Ver Projeto
@@ -160,7 +160,7 @@ export default function Projetos() {
                 <a
                   href={project.github}
                   target="_blank"
-                  className="mt-3 inline-flex items-center justify-center gap-2 bg-gray-950 text-gray-200 font-semibold px-4 py-2 rounded-lg hover:bg-gray-800 transition mx-auto"
+                  className="mt-4 mb-2 inline-flex items-center justify-center gap-2 bg-gray-950 text-gray-200 font-semibold px-4 py-2 rounded-lg hover:bg-gray-800 transition mx-auto"
                 >
                   <FaGithub className="text-gray-200" /> Código
                 </a>
