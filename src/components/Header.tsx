@@ -1,11 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const sections = ["sobre", "projetos", "habilidades", "cursos", "contato"];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -17,12 +31,51 @@ export default function Header() {
           <h1 className="text-3xl font-bold cursor-pointer">
             <a
               href="#"
-              className="text-gray-100 transition-colors duration-300 relative
+              className="inline-flex items-center relative whitespace-nowrap
               after:content-[''] after:absolute after:left-0 after:-bottom-1
               after:w-0 after:h-[2px] after:bg-green-400 after:transition-all
               hover:after:w-full"
             >
-              Lucas <span className="text-green-400">Panfieti</span>
+              {/* L */}
+              <span
+                className={`transition-colors duration-500 ease-in-out ${
+                  isScrolled ? "text-green-400" : "text-gray-100"
+                }`}
+              >
+                L
+              </span>
+              {/* ucas */}
+              <span
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  isScrolled ? "max-w-0 opacity-0" : "max-w-[120px] opacity-100"
+                }`}
+              >
+                ucas
+              </span>
+              {/* espaço */}
+              <span
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  isScrolled ? "max-w-0 opacity-0" : "max-w-[12px] opacity-100"
+                }`}
+              >
+                &nbsp;
+              </span>
+              {/* P */}
+              <span
+                className={`text-green-400 transition-all duration-500 ease-in-out ${
+                  isScrolled ? "translate-y-[0.24em]" : "translate-y-0"
+                }`}
+              >
+                P
+              </span>
+              {/* anfieti */}
+              <span
+                className={`overflow-hidden text-green-400 transition-all duration-500 ease-in-out ${
+                  isScrolled ? "max-w-0 opacity-0" : "max-w-[120px] opacity-100"
+                }`}
+              >
+                anfieti
+              </span>
             </a>
           </h1>
 
