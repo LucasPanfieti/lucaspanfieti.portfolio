@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Portfólio Lucas",
     images: [
       {
-        url: "/preview.png", // coloque o arquivo preview.png dentro de /public
+        url: "/preview.webp", // coloque o arquivo preview.webp dentro de /public
         width: 1200,
         height: 630,
         alt: "Lucas - Desenvolvedor Front-end",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Portfólio | Lucas - Desenvolvedor Front-end",
     description:
       "Portfólio de Lucas com projetos em React, Next.js, Tailwind e TypeScript.",
-    images: ["/preview.png"],
+    images: ["/preview.webp"],
   },
 };
 
