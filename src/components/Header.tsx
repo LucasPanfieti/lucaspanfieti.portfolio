@@ -39,7 +39,9 @@ export default function Header() {
               {/* L */}
               <span
                 className={`transition-colors duration-500 ease-in-out ${
-                  isScrolled ? "text-green-400" : "text-gray-100"
+                  isScrolled
+                    ? "text-green-400 delay-600"
+                    : "text-gray-100 delay-200"
                 }`}
               >
                 L
@@ -47,23 +49,30 @@ export default function Header() {
               {/* ucas */}
               <span
                 className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  isScrolled ? "max-w-0 opacity-0" : "max-w-[120px] opacity-100"
+                  isScrolled
+                    ? "max-w-0 opacity-0 delay-50"
+                    : "max-w-[120px] opacity-100 delay-300"
                 }`}
               >
                 ucas
               </span>
+
               {/* espaço */}
               <span
                 className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  isScrolled ? "max-w-0 opacity-0" : "max-w-[12px] opacity-100"
+                  isScrolled
+                    ? "max-w-0 opacity-0 delay-0"
+                    : "max-w-[12px] opacity-100 delay-300"
                 }`}
               >
                 &nbsp;
               </span>
               {/* P */}
               <span
-                className={`text-green-400 transition-all duration-500 ease-in-out ${
-                  isScrolled ? "translate-y-[0.12em]" : "translate-y-0"
+                className={`text-green-400 transition-all duration-300 ease-in-out ${
+                  isScrolled
+                    ? "translate-y-[0.12em] delay-500"
+                    : "translate-y-0 delay-0"
                 }`}
               >
                 P
@@ -71,7 +80,9 @@ export default function Header() {
               {/* anfieti */}
               <span
                 className={`overflow-hidden text-green-400 transition-all duration-500 ease-in-out ${
-                  isScrolled ? "max-w-0 opacity-0" : "max-w-[120px] opacity-100"
+                  isScrolled
+                    ? "max-w-0 opacity-0 delay-0"
+                    : "max-w-[120px] opacity-100 delay-450"
                 }`}
               >
                 anfieti
