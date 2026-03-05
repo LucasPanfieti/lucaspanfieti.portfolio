@@ -45,6 +45,30 @@ body {
   font-family: "Sifonn", sans-serif;
 }
 
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111827; /* gray-900 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4ade80; /* green-400 */
+  border-radius: 4px;
+  border: 2px solid #111827;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22c55e; /* green-500 */
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4ade80 #111827;
+}
+
 /* globals.css */
 .perspective {
   perspective: 1000px;
