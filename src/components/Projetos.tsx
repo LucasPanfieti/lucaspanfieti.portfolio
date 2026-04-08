@@ -13,11 +13,23 @@ import {
   SiTailwindcss,
   SiJavascript,
   SiVercel,
+  SiFigma,
+  SiSupabase,
 } from "react-icons/si";
 import { RiShareBoxFill } from "react-icons/ri";
 
 // constante com projetos
 const projects = [
+  {
+    name: "LampStore",
+    description:
+      "Projeto desenvolvido para facilitar vendas online de forma simples e prática, especialmente para quem utiliza o WhatsApp como principal canal. A plataforma permite criar uma loja personalizada, cadastrar produtos e compartilhar um link para clientes visualizarem o catálogo, adicionarem itens ao carrinho e finalizarem o pedido diretamente pelo WhatsApp. Conta também com dashboard completo, autenticação de usuários e sistema de analytics para acompanhamento de acessos.",
+    link: "https://www.lampstore.com.br",
+    github: "",
+    image: "/images/projetos/lampstore.webp",
+    techs: ["next", "ts", "tailwind", "vercel", "supabase"],
+    date: "Abril 2026",
+  },
   {
     name: "Gestão Financeira",
     description:
@@ -145,6 +157,12 @@ export default function Projetos() {
               )}
               {project.techs?.includes("vercel") && (
                 <SiVercel className="text-white p-0.5" />
+              )}
+              {project.techs?.includes("figma") && (
+                <SiFigma className="text-pink-500 p-0.5" />
+              )}
+              {project.techs?.includes("supabase") && (
+                <SiSupabase className="text-green-500 p-0.5" />
               )}
             </div>
             <div className="flex flex-wrap justify-center mt-3">
