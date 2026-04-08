@@ -23,7 +23,7 @@ const projects = [
   {
     name: "LampStore",
     description:
-      "Projeto desenvolvido para facilitar vendas online de forma simples e prática, especialmente para quem utiliza o WhatsApp como principal canal. A plataforma permite criar uma loja personalizada, cadastrar produtos e compartilhar um link para clientes visualizarem o catálogo, adicionarem itens ao carrinho e finalizarem o pedido diretamente pelo WhatsApp. Conta também com dashboard completo, autenticação de usuários e sistema de analytics para acompanhamento de acessos.",
+      "Plataforma SaaS desenvolvida para facilitar vendas online de forma simples e prática, especialmente para quem utiliza o WhatsApp como principal canal. Permite criar uma loja personalizada, cadastrar produtos e compartilhar um link para clientes visualizarem o catálogo, adicionarem itens ao carrinho e finalizarem o pedido diretamente pelo WhatsApp. Conta com dashboard completo, autenticação de usuários e sistema de analytics para acompanhamento de acessos.",
     link: "https://www.lampstore.com.br",
     github: "",
     image: "/images/projetos/lampstore.webp",
