@@ -10,6 +10,7 @@ import {
   SiReact,
   SiGit,
   SiFigma,
+  SiSupabase,
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 
@@ -94,6 +95,11 @@ export default function Habilidades() {
         <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
           <VscVscodeInsiders className="text-blue-500 text-5xl" />
           <span className="mt-3 text-gray-200 font-medium">VS Code</span>
+        </div>
+        {/* Supabase */}
+        <div className="flex flex-col items-center bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
+          <SiSupabase className="text-green-500 text-5xl" />
+          <span className="mt-3 text-gray-200 font-medium">Supabase</span>
         </div>
       </div>
     </section>
