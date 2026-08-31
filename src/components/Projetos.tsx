@@ -21,6 +21,16 @@ import { RiShareBoxFill } from "react-icons/ri";
 // constante com projetos
 const projects = [
   {
+    name: "Quinhas Fieti",
+    description:
+      "Site oficial do artista Quinhas Fieti, no padrão de smart-link da indústria. One-page cinematográfica com hero de lançamento, discografia das três faixas e modal de plataformas (YouTube e YouTube Music ativos; o resto em breve). Preview de 15 segundos no hover do desktop e autoplay ao abrir a modal, com play/pause só no popup. Layout mobile-first, capas em WebP e metadados de compartilhamento prontos para redes.",
+    link: "https://quinhas-fieti.vercel.app",
+    github: "https://github.com/LucasPanfieti/quinhas-fieti",
+    image: "/images/projetos/quinhas-site.webp",
+    techs: ["next", "ts", "tailwind", "vercel"],
+    date: "Agosto 2026",
+  },
+  {
     name: "LampStore",
     description:
       "Plataforma SaaS desenvolvida para facilitar vendas online de forma simples e prática, especialmente para quem utiliza o WhatsApp como principal canal. Permite criar uma loja personalizada, cadastrar produtos e compartilhar um link para clientes visualizarem o catálogo, adicionarem itens ao carrinho e finalizarem o pedido diretamente pelo WhatsApp. Conta com dashboard completo, autenticação de usuários e sistema de analytics para acompanhamento de acessos.",
