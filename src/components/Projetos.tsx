@@ -21,6 +21,16 @@ import { RiShareBoxFill } from "react-icons/ri";
 // constante com projetos
 const projects = [
   {
+    name: "Quinhas Ball Fighters",
+    description:
+      "Jogo de luta 2D no navegador (melhor de 3), feito em HTML, CSS e JavaScript puro num único index.html. Roster com sprites, select estilo Injustice, combos, defesa, esfera de ki, cenários, áudio e suporte a teclado, gamepad e touch no mobile. Menus completos (um jogador, versus, controles e áudio) e deploy no GitHub Pages.",
+    link: "https://lucaspanfieti.github.io/quinhas-fighters/",
+    github: "https://github.com/LucasPanfieti/quinhas-fighters",
+    image: "/images/projetos/quinhas-fighters.webp",
+    techs: ["html", "css", "js"],
+    date: "Novembro 2026",
+  },
+  {
     name: "Quinhas Fieti",
     description:
       "Site oficial do artista Quinhas Fieti, no padrão de smart-link da indústria. One-page cinematográfica com hero de lançamento, discografia das três faixas e modal de plataformas (YouTube e YouTube Music ativos; o resto em breve). Preview de 15 segundos no hover do desktop e autoplay ao abrir a modal, com play/pause só no popup. Layout mobile-first, capas em WebP e metadados de compartilhamento prontos para redes.",
