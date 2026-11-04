@@ -23,7 +23,7 @@ const projects = [
   {
     name: "Quinhas Ball Fighters",
     description:
-      "Jogo de luta 2D no navegador (melhor de 3), feito em HTML, CSS e JavaScript puro num único index.html. Roster com sprites, select estilo Injustice, combos, defesa, esfera de ki, cenários, áudio e suporte a teclado, gamepad e touch no mobile. Menus completos (um jogador, versus, controles e áudio) e deploy no GitHub Pages.",
+      "Jogo de luta 2D desenvolvido para navegador utilizando HTML, CSS e JavaScript puro. Conta com elenco de personagens originais, seleção de lutadores, sistema de combos, defesa, esfera de Ki, cenários personalizados e efeitos sonoros. Possui modos de jogo para um jogador e versus, suporte a teclado, gamepad e controles touch para dispositivos móveis, além de menus de configuração e publicação via GitHub Pages.",
     link: "https://lucaspanfieti.github.io/quinhas-fighters/",
     github: "https://github.com/LucasPanfieti/quinhas-fighters",
     image: "/images/projetos/quinhas-fighters.webp",
