@@ -3,21 +3,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Portfólio | Lucas - Desenvolvedor Front-end",
+  title: "Portfólio | Lucas Panfieti - Software Developer",
   description:
-    "Portfólio de Lucas, desenvolvedor front-end. Projetos em React, Next.js, Tailwind, TypeScript e mais.",
+    "Portfólio de Lucas Panfieti, Software Developer com foco em Front-end. Projetos em React, Next.js, TypeScript, Tailwind e mais.",
   openGraph: {
-    title: "Portfólio | Lucas - Desenvolvedor Front-end",
+    title: "Portfólio | Lucas Panfieti - Software Developer",
     description:
-      "Confira meus projetos e habilidades em desenvolvimento front-end.",
+      "Confira meus projetos e habilidades em desenvolvimento web, IA e criação digital.",
     url: "https://lucaspanfieti-portfolio.vercel.app/",
-    siteName: "Portfólio Lucas",
+    siteName: "Portfólio Lucas Panfieti",
     images: [
       {
-        url: "/preview.webp", // coloque o arquivo preview.webp dentro de /public
+        url: "/preview.webp",
         width: 1200,
         height: 630,
-        alt: "Lucas - Desenvolvedor Front-end",
+        alt: "Lucas Panfieti - Software Developer",
       },
     ],
     locale: "pt_BR",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfólio | Lucas - Desenvolvedor Front-end",
+    title: "Portfólio | Lucas Panfieti - Software Developer",
     description:
-      "Portfólio de Lucas com projetos em React, Next.js, Tailwind e TypeScript.",
+      "Portfólio de Lucas Panfieti com projetos em React, Next.js, TypeScript e Tailwind.",
     images: ["/preview.webp"],
   },
 };
