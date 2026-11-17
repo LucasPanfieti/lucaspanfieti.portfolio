@@ -23,6 +23,8 @@ import {
   SiSuno,
   SiElectron,
   SiSqlite,
+  SiPwa,
+  SiOpenai,
 } from "react-icons/si";
 import { RiShareBoxFill } from "react-icons/ri";
 
@@ -70,11 +72,11 @@ const projects: Project[] = [
   {
     name: "LampStore",
     description:
-      "Plataforma SaaS desenvolvida para facilitar vendas online de forma simples e prática, especialmente para quem utiliza o WhatsApp como principal canal. Permite criar uma loja personalizada, cadastrar produtos e compartilhar um link para clientes visualizarem o catálogo, adicionarem itens ao carrinho e finalizarem o pedido diretamente pelo WhatsApp. Conta com dashboard completo, autenticação de usuários e sistema de analytics para acompanhamento de acessos.",
+      "Plataforma SaaS para criar lojas online e vender pelo WhatsApp. O vendedor personaliza o catálogo, compartilha o link da loja e o cliente finaliza o pedido direto no WhatsApp. Inclui dashboard, autenticação, analytics, variantes de produto, trial PRO, PWA instalável e moderação automática de conteúdo com OpenAI.",
     link: "https://www.lampstore.com.br",
     github: "",
     image: "/images/projetos/lampstore.webp",
-    techs: ["next", "ts", "tailwind", "vercel", "supabase"],
+    techs: ["next", "react", "ts", "tailwind", "supabase", "vercel", "pwa", "openai"],
     date: "Abril 2026",
   },
   {
@@ -90,7 +92,7 @@ const projects: Project[] = [
   {
     name: "Meu Portfólio",
     description:
-      "Portfólio de Lucas Panfieti, feito com Next.js e com deploy na Vercel",
+      "Portfólio pessoal em Next.js com seções de projetos, habilidades, cursos e contato. Destaca o trabalho em Front-end, inteligência artificial e criação digital, com layout responsivo, navegação por âncoras e deploy contínuo na Vercel.",
     link: "https://lucaspanfieti-portfolio.vercel.app/",
     github: "https://github.com/LucasPanfieti/lucaspanfieti.portfolio",
     image: "/images/projetos/portifolio.webp",
@@ -209,6 +211,12 @@ function ProjectCard({ project }: { project: Project }) {
         )}
         {project.techs?.includes("sqlite") && (
           <SiSqlite className="text-sky-500 p-0.5" />
+        )}
+        {project.techs?.includes("pwa") && (
+          <SiPwa className="text-purple-400 p-0.5" />
+        )}
+        {project.techs?.includes("openai") && (
+          <SiOpenai className="text-emerald-400 p-0.5" />
         )}
       </div>
       {(project.link || project.github) && (
