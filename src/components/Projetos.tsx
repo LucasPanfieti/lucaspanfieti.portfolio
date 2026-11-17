@@ -92,7 +92,7 @@ const projects: Project[] = [
   {
     name: "Meu Portfólio",
     description:
-      "Portfólio de Lucas Panfieti, feito com Next.js e com deploy na Vercel",
+      "Portfólio pessoal em Next.js com seções de projetos, habilidades, cursos e contato. Destaca o trabalho em Front-end, inteligência artificial e criação digital, com layout responsivo, navegação por âncoras e deploy contínuo na Vercel.",
     link: "https://lucaspanfieti-portfolio.vercel.app/",
     github: "https://github.com/LucasPanfieti/lucaspanfieti.portfolio",
     image: "/images/projetos/portifolio.webp",
