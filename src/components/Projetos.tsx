@@ -15,6 +15,7 @@ import {
   SiVercel,
   SiFigma,
   SiSupabase,
+  SiSuno,
 } from "react-icons/si";
 import { RiShareBoxFill } from "react-icons/ri";
 
@@ -37,7 +38,7 @@ const projects = [
     link: "https://quinhas-fieti.vercel.app",
     github: "https://github.com/LucasPanfieti/quinhas-fieti",
     image: "/images/projetos/quinhas-site.webp",
-    techs: ["next", "ts", "tailwind", "vercel"],
+    techs: ["next", "ts", "tailwind", "vercel", "suno"],
     date: "Agosto 2026",
   },
   {
@@ -183,6 +184,9 @@ export default function Projetos() {
               )}
               {project.techs?.includes("supabase") && (
                 <SiSupabase className="text-green-500 p-0.5" />
+              )}
+              {project.techs?.includes("suno") && (
+                <SiSuno className="text-white p-0.5" />
               )}
             </div>
             <div className="flex flex-wrap justify-center mt-3">

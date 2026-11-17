@@ -8,19 +8,26 @@ export default function SobreMim() {
       <h2 className="text-3xl font-semibold text-green-400">Sobre mim</h2>
       <p className="mt-6 max-w-2xl mx-auto text-gray-300 text-justify">
         Olá! 👋 Meu nome é{" "}
-        <span className="text-green-400">Lucas Panfieti</span>, atuo hoje como{" "}
-        <span className="text-green-400">Software Developer</span> e sou formado
-        em{" "}
+        <span className="text-green-400">Lucas Panfieti</span>, sou{" "}
+        <span className="text-green-400">Software Developer</span> e formado em{" "}
         <span className="text-green-400">
           Análise e Desenvolvimento de Sistemas
         </span>
         . Tenho foco em{" "}
-        <span className="text-green-400">desenvolvimento front-end</span>, com
-        tecnologias como{" "}
+        <span className="text-green-400">desenvolvimento Front-end</span>,
+        utilizando tecnologias como{" "}
         <span className="text-green-400">
           HTML, CSS, JavaScript, TypeScript, React, Next.js e Tailwind CSS
         </span>
-        . Estou sempre buscando desafios práticos e formas de aprimorar minhas
+        .
+      </p>
+      <p className="mt-4 max-w-2xl mx-auto text-gray-300 text-justify">
+        Além do desenvolvimento de aplicações web, tenho interesse em{" "}
+        <span className="text-green-400">inteligência artificial</span> e{" "}
+        <span className="text-green-400">criação digital</span>, explorando
+        ferramentas para desenvolver soluções, experiências visuais e projetos
+        criativos. Gosto de transformar ideias em projetos reais, aprender novas
+        tecnologias e buscar constantemente formas de aprimorar minhas
         habilidades.
       </p>
 
