@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 import {
@@ -6,6 +9,8 @@ import {
   FaCss3Alt,
   FaReact,
   FaRegCalendarAlt,
+  FaChevronDown,
+  FaChevronUp,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -16,11 +21,32 @@ import {
   SiFigma,
   SiSupabase,
   SiSuno,
+  SiElectron,
+  SiSqlite,
 } from "react-icons/si";
 import { RiShareBoxFill } from "react-icons/ri";
 
-// constante com projetos
-const projects = [
+const INITIAL_VISIBLE = 6;
+
+type Project = {
+  name: string;
+  description: string;
+  link?: string;
+  github?: string;
+  image?: string;
+  techs: string[];
+  date: string;
+};
+
+const projects: Project[] = [
+  {
+    name: "Mecânica Brasil — Sistema para Oficinas",
+    description:
+      "Software desktop para oficinas mecânicas: cadastro de clientes e veículos, abertura e acompanhamento de ordens de serviço, tudo rodando offline no Windows, sem depender de internet ou mensalidade. Dados ficam na própria máquina da oficina, com backup automático e restauração. Projeto em fase de validação com uso real em oficina.",
+    image: "/images/projetos/mecanica-brasil.webp",
+    techs: ["electron", "ts", "sqlite"],
+    date: "Novembro 2026",
+  },
   {
     name: "Quinhas Ball Fighters",
     description:
@@ -122,7 +148,105 @@ const projects = [
   },
 ];
 
+function ProjectCard({ project }: { project: Project }) {
+  return (
+    <div className="p-6 border border-gray-700 rounded-xl bg-gray-900 shadow hover:shadow-lg hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300">
+      <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
+        <FaRegCalendarAlt />
+        <span>{project.date}</span>
+      </div>
+      {project.image ? (
+        <Image
+          src={project.image}
+          alt={project.name}
+          width={400}
+          height={200}
+          className="w-full h-fit object-contain rounded-lg mb-3 border-1 border-gray-800"
+        />
+      ) : (
+        <div className="w-full aspect-video rounded-lg mb-3 border border-gray-700 bg-gray-800 flex items-center justify-center text-gray-500 text-sm">
+          Screenshot em breve
+        </div>
+      )}
+      <h3 className="font-bold text-lg text-left">{project.name}</h3>
+      <p className="text-gray-400 mt-2 text-justify">{project.description}</p>
+      <div className="flex items-center gap-3 mt-3 text-xl">
+        {project.techs?.includes("html") && (
+          <FaHtml5 className="text-orange-500" />
+        )}
+        {project.techs?.includes("css") && (
+          <FaCss3Alt className="text-blue-500" />
+        )}
+        {project.techs?.includes("js") && (
+          <SiJavascript className="text-yellow-400" />
+        )}
+        {project.techs?.includes("react") && (
+          <FaReact className="text-cyan-400" />
+        )}
+        {project.techs?.includes("next") && (
+          <SiNextdotjs className="text-white" />
+        )}
+        {project.techs?.includes("ts") && (
+          <SiTypescript className="text-blue-400" />
+        )}
+        {project.techs?.includes("tailwind") && (
+          <SiTailwindcss className="text-sky-400" />
+        )}
+        {project.techs?.includes("vercel") && (
+          <SiVercel className="text-white p-0.5" />
+        )}
+        {project.techs?.includes("figma") && (
+          <SiFigma className="text-pink-500 p-0.5" />
+        )}
+        {project.techs?.includes("supabase") && (
+          <SiSupabase className="text-green-500 p-0.5" />
+        )}
+        {project.techs?.includes("suno") && (
+          <SiSuno className="text-white p-0.5" />
+        )}
+        {project.techs?.includes("electron") && (
+          <SiElectron className="text-cyan-300 p-0.5" />
+        )}
+        {project.techs?.includes("sqlite") && (
+          <SiSqlite className="text-sky-500 p-0.5" />
+        )}
+      </div>
+      {(project.link || project.github) && (
+        <div className="flex flex-wrap justify-center mt-3">
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              className="mt-4 mb-2 inline-flex items-center justify-center gap-2 bg-green-400 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition mx-auto"
+            >
+              <RiShareBoxFill />
+              Ver Projeto
+            </a>
+          )}
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              className="mt-4 mb-2 inline-flex items-center justify-center gap-2 bg-gray-950 text-gray-200 font-semibold px-4 py-2 rounded-lg hover:bg-gray-800 transition mx-auto"
+            >
+              <FaGithub className="text-gray-200" /> Código
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+const gridClassName =
+  "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6";
+
 export default function Projetos() {
+  const [showAll, setShowAll] = useState(false);
+  const featuredProjects = projects.slice(0, INITIAL_VISIBLE);
+  const remainingProjects = projects.slice(INITIAL_VISIBLE);
+  const hasMore = remainingProjects.length > 0;
+
   return (
     <section
       id="projetos"
@@ -131,86 +255,54 @@ export default function Projetos() {
       <h2 className="text-3xl font-semibold text-center text-green-400">
         Projetos
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 ">
-        {projects.map((project) => (
-          <div
-            key={project.name}
-            className="p-6 border border-gray-700 rounded-xl bg-gray-900 shadow hover:shadow-lg hover:shadow-green-400/30 hover:scale-105 transition-transform duration-300 "
-          >
-            {/* Data do projeto */}
-            <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
-              <FaRegCalendarAlt />
-              <span>{project.date}</span>
-            </div>
-            {/* Imagem do projeto */}
-            <Image
-              src={project.image}
-              alt={project.name}
-              width={400} // largura original da imagem
-              height={200} // altura original da imagem
-              className="w-full h-fit object-contain rounded-lg mb-3 border-1 border-gray-800"
-            />
-            <h3 className="font-bold text-lg text-left">{project.name}</h3>
-            <p className="text-gray-400 mt-2 text-justify">
-              {project.description}
-            </p>
-            <div className="flex items-center gap-3 mt-3 text-xl">
-              {project.techs?.includes("html") && (
-                <FaHtml5 className="text-orange-500" />
-              )}
-              {project.techs?.includes("css") && (
-                <FaCss3Alt className="text-blue-500" />
-              )}
-              {project.techs?.includes("js") && (
-                <SiJavascript className="text-yellow-400" />
-              )}
-              {project.techs?.includes("react") && (
-                <FaReact className="text-cyan-400" />
-              )}
-              {project.techs?.includes("next") && (
-                <SiNextdotjs className="text-white" />
-              )}
-              {project.techs?.includes("ts") && (
-                <SiTypescript className="text-blue-400" />
-              )}
-              {project.techs?.includes("tailwind") && (
-                <SiTailwindcss className="text-sky-400" />
-              )}
-              {project.techs?.includes("vercel") && (
-                <SiVercel className="text-white p-0.5" />
-              )}
-              {project.techs?.includes("figma") && (
-                <SiFigma className="text-pink-500 p-0.5" />
-              )}
-              {project.techs?.includes("supabase") && (
-                <SiSupabase className="text-green-500 p-0.5" />
-              )}
-              {project.techs?.includes("suno") && (
-                <SiSuno className="text-white p-0.5" />
-              )}
-            </div>
-            <div className="flex flex-wrap justify-center mt-3">
-              <a
-                href={project.link}
-                target="_blank"
-                className="mt-4 mb-2 inline-flex items-center justify-center gap-2 bg-green-400 text-gray-900 font-semibold px-4 py-2 rounded-lg hover:bg-green-600 transition mx-auto"
-              >
-                <RiShareBoxFill />
-                Ver Projeto
-              </a>
-              {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  className="mt-4 mb-2 inline-flex items-center justify-center gap-2 bg-gray-950 text-gray-200 font-semibold px-4 py-2 rounded-lg hover:bg-gray-800 transition mx-auto"
-                >
-                  <FaGithub className="text-gray-200" /> Código
-                </a>
-              )}
-            </div>
-          </div>
+
+      <div className={`${gridClassName} mt-10`}>
+        {featuredProjects.map((project) => (
+          <ProjectCard key={project.name} project={project} />
         ))}
       </div>
+
+      {hasMore && !showAll && (
+        <div className="relative mt-6">
+          <div
+            className={`${gridClassName} max-h-56 overflow-hidden pointer-events-none select-none`}
+            aria-hidden="true"
+          >
+            {remainingProjects.map((project) => (
+              <ProjectCard key={project.name} project={project} />
+            ))}
+          </div>
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-gray-800/10 via-gray-800/75 to-gray-800" />
+          <div className="absolute inset-x-0 bottom-0 flex justify-center pb-2">
+            <button
+              type="button"
+              onClick={() => setShowAll(true)}
+              className="inline-flex items-center justify-center gap-2 bg-green-400 text-gray-900 font-semibold px-6 py-2 rounded-lg hover:bg-green-600 hover:scale-105 transition-transform duration-300 cursor-pointer"
+            >
+              Mostrar mais
+              <FaChevronDown className="text-sm" />
+            </button>
+          </div>
+        </div>
+      )}
+
+      {hasMore && showAll && (
+        <>
+          <div className={`${gridClassName} mt-6`}>
+            {remainingProjects.map((project) => (
+              <ProjectCard key={project.name} project={project} />
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={() => setShowAll(false)}
+            className="mt-10 inline-flex items-center justify-center gap-2 bg-green-400 text-gray-900 font-semibold px-6 py-2 rounded-lg hover:bg-green-600 hover:scale-105 transition-transform duration-300 cursor-pointer"
+          >
+            Mostrar menos
+            <FaChevronUp className="text-sm" />
+          </button>
+        </>
+      )}
     </section>
   );
 }

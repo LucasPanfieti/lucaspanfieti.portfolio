@@ -2,7 +2,6 @@
 
 import {
   FaEnvelope,
-  FaPhoneAlt,
   FaMapMarkerAlt,
   FaGithub,
   FaLinkedin,
@@ -26,11 +25,6 @@ export default function Contato() {
           <div className="flex items-center gap-4 text-gray-300">
             <FaEnvelope className="text-green-400 text-xl" />
             <span>lucaspanfieti@gmail.com</span>
-          </div>
-
-          <div className="flex items-center gap-4 text-gray-300">
-            <FaPhoneAlt className="text-green-400 text-xl" />
-            <span>(11) 98742-3930</span>
           </div>
 
           <div className="flex items-center gap-4 text-gray-300">
